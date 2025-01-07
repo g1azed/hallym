@@ -54,8 +54,6 @@ main{
     justify-content: space-between;
 }
 
-
-
 .mainSectionTextImg{
     object-fit: contain;
     width: 50vw;
@@ -70,3 +68,9 @@ main{
 
 
 
+.mainIndex-2{
+    display: flex;
+}
+.mainIndexLeft{
+    position:
+}
