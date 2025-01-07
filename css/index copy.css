@@ -5,7 +5,7 @@
   } */
 
 
-main{
+  main{
     width: 100%;
     font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
 }
@@ -19,27 +19,9 @@ main{
     background-image: url("../asset/background/MainSectionTop.png");
     background-repeat: no-repeat;
     background-size: cover;
-}
-.mainSectionContent-1.hidden {
-    opacity: 0; /* 사라짐 */
-    visibility: hidden; /* 완전히 숨겨짐 */
-}
 
+}
 .mainSection-2{
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    
-    background-image: url("../asset/background/MainSectionBottom.png");
-    background-size: cover;
-    background-attachment: fixed; /* 배경 고정 */
-    background-position: center center;
-    height: 100vh;
-}
-
-.mainSection-3{
     width: 100%;
     height: 100vh;
     background-image: url("../asset/background/MainSectionBottom.png");
@@ -48,29 +30,18 @@ main{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    /* background-attachment: fixed; */
-}s
+    background-attachment: fixed;
+}
 
 .mainSectionContent-1 {
     width: 100%;
-    height: auto;
+    height: 0;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
-    position: absolute;
-    top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 10;
-    transition: opacity 0.5s ease-out; /* 부드럽게 숨겨짐 */
+    z-index: 3;
 }
-.mainSectionContent-1.hidden {
-    opacity: 0;
-    visibility: hidden; /* 요소를 숨깁니다 */
-}
-
-
 .mainSectionContent-2{
     width: 100%;
     height: auto;
@@ -79,11 +50,6 @@ main{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: relative;
-
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.5s ease, visibility 0.5s ease;
 }
 .mainSectionContent-2 h2{
     font-family: "IBM Plex Sans KR", serif;

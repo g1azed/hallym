@@ -1,0 +1,16 @@
+.searchWrap{
+    width: 100vw;
+    height: 100vh;
+    background-color: #ECF1F4;
+    
+}
+.searchWrap img.search{
+    width: 74vw;
+    display: block;
+    margin: 0 auto;
+    padding-top: 6vw;
+}
+.searchWrap .delete{
+    position: fixed;
+    right:6.25vw ; top: 1.35vw;
+}
