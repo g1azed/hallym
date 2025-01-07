@@ -36,7 +36,9 @@
     
             <div class="headerIconWrap">
                 <img src="./asset/KoreanIcon.svg" alt="한글 페이지 아이콘" />
-                <img src="./asset/SearchIcon.svg" alt="검색" />
+                <button>
+                    <a href="./search.html"> <img src="./asset/SearchIcon.svg" alt="검색" /> </a>
+                </button>
                 <img src="./asset/headerBarIcon.svg" alt="헤더햄버거바 아이콘" />
             </div>
         </div>
@@ -44,26 +46,29 @@
     <main>
         <div class="mainIndex-1">
             
-            <div id="fullpage" class="slideSection">
-                <section class=" section mainSection mainSection-1" data-index="0"> </section>
+            <div id="fullpage">
+                <div class="section mainSection-1">
+                    <div class="mainSectionContent-1">
+                        <img class="mainSectionTextImg" src="./asset/MainIndex/MainSectionText.png" alt="ALL NEW HALLYM"/>
+                        <div class="mainSectionBtnWrap">
+                            <div> <img src="./asset/Button/BottomBotton.svg" /> </div>
+                            <button> <img src="./asset/Button/ChatBotButton.svg" /> </button>
+                        </div>
+                    </div>    
+                </div>
 
-                <section class=" section mainSection mainSection-2" data-index="1"> </section> 
-            </div>
-
-            <div class="mainSectionContent-1">
-                <img class="mainSectionTextImg" src="./asset/MainIndex/MainSectionText.png" alt="ALL NEW HALLYM"/>
-                <div class="mainSectionBtnWrap">
-                    <div> <img src="./asset/Button/BottomBotton.svg" /> </div>
-                    <button> <img src="./asset/Button/ChatBotButton.svg" /> </button>
+                <div class="section mainSection-2"> 
+                    
+                </div>
+                <div class="section mainSection-3"> 
+                    <div class="mainSectionContent-2">
+                        <h2> Hallym Mission </h2>
+                        <p> 한림대학은 1982년 건학 이래 '풍부한 인간성과 창조적 지성을 지닌 인재를 양성하고, <br/>
+                            학술 및 문화의 진흥을 도모'함으로써 '개인의 성장, 사회의 발전, 국가의 번영, <br/>
+                            인류의 행복에 기여함'을 실현하기 위해 매진해 왔습니다.</p>
+                    </div> 
                 </div>
             </div>
-
-            <div class="mainSectionContent-2">
-                <h2> Hallym Mission </h2>
-                <p> 한림대학은 1982년 건학 이래 '풍부한 인간성과 창조적 지성을 지닌 인재를 양성하고, <br/>
-                    학술 및 문화의 진흥을 도모'함으로써 '개인의 성장, 사회의 발전, 국가의 번영, <br/>
-                    인류의 행복에 기여함'을 실현하기 위해 매진해 왔습니다.</p>
-            </div> 
     
         </div>
 
@@ -136,7 +141,75 @@
         <img src="./asset/footer/Footer-pc.png" />
     </footer>
 
-   
+
+    <script>
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const contentElement = document.querySelector('.mainSectionContent-1');
+    const fullpageElement = document.querySelector('#fullpage');
+    const section2 = document.querySelector('.mainSection-2');
+    const section3 = document.querySelector('.mainSection-3');
+
+    // fullpage.js 초기화
+    new fullpage('#fullpage', {
+        scrollBar: true,
+        navigation: true,
+        onLeave: function (origin, destination, direction) {
+            // mainSection-1에서 mainSection-2로 넘어갈 때
+            if (origin.index === 0 && destination.index === 1 && direction === 'down') {
+                // mainSection-1에서 mainSection-2로 콘텐츠 이동
+                contentElement.classList.remove('hidden');
+            }
+
+            // mainSection-2에서 mainSection-3으로 넘어갈 때
+            if (origin.index === 1 && destination.index === 2 && direction === 'down') {
+                // mainSection-3에 들어갔을 때 mainSectionContent-1 숨기기
+                contentElement.classList.add('hidden');
+            }
+
+            // mainSection-3에서 mainSection-2로 돌아갈 때
+            if (origin.index === 2 && destination.index === 1 && direction === 'up') {
+                // mainSection-2에서 다시 보여주기
+                contentElement.classList.remove('hidden');
+            }
+            
+            // mainSection-1에서 mainSection-2로 넘어갈 때
+            if (origin.index === 0 && destination.index === 1 && direction === 'down') {
+                // mainSection-1에서 mainSection-2로 콘텐츠 이동
+                contentElement.classList.remove('hidden');
+            }
+
+            // mainSection-2에서 mainSection-3으로 넘어갈 때
+            if (origin.index === 1 && destination.index === 2 && direction === 'down') {
+                // mainSection-3에 들어갔을 때 mainSectionContent-1 숨기기
+                contentElement.classList.add('hidden');
+            }
+
+            // mainSection-3에서 mainSection-2로 돌아갈 때
+            if (origin.index === 2 && destination.index === 1 && direction === 'up') {
+                // mainSection-2에서 다시 보여주기
+                contentElement.classList.remove('hidden');
+            }
+
+             // mainSection-2에서 mainSection-3으로 넘어갈 때 배경 고정
+             if (origin.index === 1 && destination.index === 2 && direction === 'down') {
+                // 배경 고정
+                section2.style.backgroundAttachment = 'fixed';
+            }
+
+            // mainSection-3에서 mainSection-2로 돌아올 때 배경 고정 해제
+            if (origin.index === 2 && destination.index === 1 && direction === 'up') {
+                // 배경 고정 해제
+                section2.style.backgroundAttachment = 'scroll';
+            }
+        }
+    });
+});
+
+        
+    </script>
+
 </body>
 
 <!-- <script src="./js/fullpage.js"></script> -->

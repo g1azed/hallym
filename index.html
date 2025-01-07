@@ -47,44 +47,35 @@
         <div class="mainIndex-1">
 
             <div id="fullpage">
+                <!-- Section 1 -->
                 <div class="section mainSection-1">
+                    <div class="mainSection-1_Bg"></div>
                     <div class="mainSectionContent-1">
                         <img class="mainSectionTextImg" src="./asset/MainIndex/MainSectionText.png" alt="ALL NEW HALLYM"/>
                         <div class="mainSectionBtnWrap">
-                            <div> <img src="./asset/Button/BottomBotton.svg" /> </div>
-                            <button> <img src="./asset/Button/ChatBotButton.svg" /> </button>
+                            <div><img src="./asset/Button/BottomBotton.svg" /></div>
+                            <button><img src="./asset/Button/ChatBotButton.svg" /></button>
                         </div>
-                    </div>    
+                    </div>
                 </div>
-
-                <div class="section mainSection-2"> 
-                    
-                </div>
-                <div class="section mainSection-3"> 
+            
+                <!-- Section 2 -->
+                <div class="section mainSection-2">
+                    <div class="mainSection-2_Bg"></div>
                     <div class="mainSectionContent-2">
-                        <h2> Hallym Mission </h2>
-                        <p> 한림대학은 1982년 건학 이래 '풍부한 인간성과 창조적 지성을 지닌 인재를 양성하고, <br/>
+                        <h2>Hallym Mission</h2>
+                        <p>한림대학은 1982년 건학 이래 '풍부한 인간성과 창조적 지성을 지닌 인재를 양성하고, <br/>
                             학술 및 문화의 진흥을 도모'함으로써 '개인의 성장, 사회의 발전, 국가의 번영, <br/>
                             인류의 행복에 기여함'을 실현하기 위해 매진해 왔습니다.</p>
-                    </div> 
+                    </div>
+                </div>
+            
+                <!-- Section 3 -->
+                <div class="section mainSection-3">
+                    <h2>Section 3</h2>
                 </div>
             </div>
 
-            <!-- <div id="fullpage" class="slideSection">
-                <section class=" section mainSection mainSection-1" data-index="0"> </section>
-
-                <section class=" section mainSection mainSection-2" data-index="1"> </section> 
-            </div> -->
-
-            <!-- 
-
-            <div class="mainSectionContent-2">
-                <h2> Hallym Mission </h2>
-                <p> 한림대학은 1982년 건학 이래 '풍부한 인간성과 창조적 지성을 지닌 인재를 양성하고, <br/>
-                    학술 및 문화의 진흥을 도모'함으로써 '개인의 성장, 사회의 발전, 국가의 번영, <br/>
-                    인류의 행복에 기여함'을 실현하기 위해 매진해 왔습니다.</p>
-            </div>  -->
-    
         </div>
 
         <div class="mainIndex-2">
@@ -160,66 +151,21 @@
     <script>
 
 
-document.addEventListener('DOMContentLoaded', () => {
-    const contentElement = document.querySelector('.mainSectionContent-1');
-    const fullpageElement = document.querySelector('#fullpage');
-    const section2 = document.querySelector('.mainSection-2');
-    const section3 = document.querySelector('.mainSection-3');
+new fullpage('#fullpage', {
+    scrollBar: true,
+    navigation: true,
+    onLeave: function (origin, destination, direction) {
+        const content1 = document.querySelector('.mainSectionContent-1');
+        const content2 = document.querySelector('.mainSectionContent-2');
 
-    // fullpage.js 초기화
-    new fullpage('#fullpage', {
-        scrollBar: true,
-        navigation: true,
-        onLeave: function (origin, destination, direction) {
-            // mainSection-1에서 mainSection-2로 넘어갈 때
-            if (origin.index === 0 && destination.index === 1 && direction === 'down') {
-                // mainSection-1에서 mainSection-2로 콘텐츠 이동
-                contentElement.classList.remove('hidden');
-            }
-
-            // mainSection-2에서 mainSection-3으로 넘어갈 때
-            if (origin.index === 1 && destination.index === 2 && direction === 'down') {
-                // mainSection-3에 들어갔을 때 mainSectionContent-1 숨기기
-                contentElement.classList.add('hidden');
-            }
-
-            // mainSection-3에서 mainSection-2로 돌아갈 때
-            if (origin.index === 2 && destination.index === 1 && direction === 'up') {
-                // mainSection-2에서 다시 보여주기
-                contentElement.classList.remove('hidden');
-            }
-            
-            // mainSection-1에서 mainSection-2로 넘어갈 때
-            if (origin.index === 0 && destination.index === 1 && direction === 'down') {
-                // mainSection-1에서 mainSection-2로 콘텐츠 이동
-                contentElement.classList.remove('hidden');
-            }
-
-            // mainSection-2에서 mainSection-3으로 넘어갈 때
-            if (origin.index === 1 && destination.index === 2 && direction === 'down') {
-                // mainSection-3에 들어갔을 때 mainSectionContent-1 숨기기
-                contentElement.classList.add('hidden');
-            }
-
-            // mainSection-3에서 mainSection-2로 돌아갈 때
-            if (origin.index === 2 && destination.index === 1 && direction === 'up') {
-                // mainSection-2에서 다시 보여주기
-                contentElement.classList.remove('hidden');
-            }
-
-             // mainSection-2에서 mainSection-3으로 넘어갈 때 배경 고정
-             if (origin.index === 1 && destination.index === 2 && direction === 'down') {
-                // 배경 고정
-                section2.style.backgroundAttachment = 'fixed';
-            }
-
-            // mainSection-3에서 mainSection-2로 돌아올 때 배경 고정 해제
-            if (origin.index === 2 && destination.index === 1 && direction === 'up') {
-                // 배경 고정 해제
-                section2.style.backgroundAttachment = 'scroll';
-            }
+        if (destination.index === 2) { // mainSection-3로 이동할 때
+            content1.classList.add('hidden'); // mainSectionContent-1 fadeOut
+            content2.classList.add('visible'); // mainSectionContent-2 fadeIn
+        } else if (origin.index === 2 && destination.index === 1) { // mainSection-2로 돌아갈 때
+            content1.classList.remove('hidden'); // mainSectionContent-1 다시 보이기
+            content2.classList.remove('visible'); // mainSectionContent-2 숨김
         }
-    });
+    }
 });
 
         
