@@ -1,22 +1,29 @@
+/* .ibm-plex-sans-kr-regular {
+    font-family: "IBM Plex Sans KR", serif;
+    font-weight: 400;
+    font-style: normal;
+  } */
+  
+
 main{
     width: 100%;
     height: 100vh;
     font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
-    overflow-y: scroll;
+    /* overflow-y: scroll; */
     /* scroll-snap-type: y mandatory; */
 }
 
 .mainIndex-1{
     width: auto;
-    height: 100vh;
 }
 .mainSection-1{
     width: 100%;
     height: 100vh;
     background-image: url("../asset/background/MainSectionTop.png");
     background-repeat: no-repeat;
-    scroll-snap-align: end;
-    position: sticky;
+
+    /* scroll-snap-align: end; */
+
     /* scroll-snap-stop: always; */
 }
 .mainSection-2{
@@ -41,19 +48,35 @@ main{
     flex-direction: column;
     justify-content: space-between;
     z-index: 3;
-    position: sticky;
-    top: 18.22vw;
+    /* position: sticky;
+    top: 18.33vw; */
 
 }
 .mainSectionContent-2{
     width: 100%;
-    height: 0;
+    /* height: 0; */
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
 }
-
+.mainSectionContent-2 h2{
+    font-family: "IBM Plex Sans KR", serif;
+    font-weight: 700;
+    font-size: 4.16vw;
+    line-height: 4.7vw ;
+    color: #fff;
+    margin-bottom: 2.08vw;
+}
+.mainSectionContent-2 p{
+    font-family: "Pretendard Variable";
+    font-weight: 400;
+    font-size: 1.25vw;
+    line-height: 1.6vw;
+    color: #fff;
+    text-align: center;
+}
 .mainSectionTextImg{
     object-fit: contain;
     width: 50vw;
@@ -69,8 +92,16 @@ main{
 
 
 .mainIndex-2{
+    height: calc(65.41 * 2)vw;
     display: flex;
+    gap: 2.08vw;
 }
-.mainIndexLeft{
-    position:
+.mainIndex-2 .mainIndexLeft img{
+    position: sticky;
+    top: 50px;
+}
+
+.mainIndex-2 .mainIndexRight{
+    /* overflow-y: hidden; */
+
 }
