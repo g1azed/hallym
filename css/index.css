@@ -3,11 +3,10 @@
     font-weight: 400;
     font-style: normal;
   } */
-  
+
 
 main{
     width: 100%;
-    height: 100vh;
     font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
     /* overflow-y: scroll; */
     /* scroll-snap-type: y mandatory; */
@@ -21,7 +20,7 @@ main{
     height: 100vh;
     background-image: url("../asset/background/MainSectionTop.png");
     background-repeat: no-repeat;
-
+    background-size: cover;
     /* scroll-snap-align: end; */
 
     /* scroll-snap-stop: always; */
@@ -31,6 +30,7 @@ main{
     height: 100vh;
     background-image: url("../asset/background/MainSectionBottom.png");
     background-repeat: no-repeat;
+    background-size: cover;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -54,7 +54,7 @@ main{
 }
 .mainSectionContent-2{
     width: 100%;
-    /* height: 0; */
+    height: 0; 
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -92,16 +92,152 @@ main{
 
 
 .mainIndex-2{
-    height: calc(65.41 * 2)vw;
+    /* height: calc(65.41 * 2)vw; */
+    height: 170.66vw;
     display: flex;
+    flex-shrink: 1;
     gap: 2.08vw;
+    padding-bottom :15.36vw;
 }
 .mainIndex-2 .mainIndexLeft img{
+    width: 50vw;
     position: sticky;
-    top: 50px;
+    top:0;
 }
 
 .mainIndex-2 .mainIndexRight{
-    /* overflow-y: hidden; */
+    height: 150vw;
+}
+.mainIndexRight_btnWrap {
+    width: 100%;
+    margin-top: 4.16vw;
+    position: relative;
+}
+.mainIndex-2 .mainIndexRight button{
+    font-family: "Pretendard Variable";
+    font-weight: 500;
+    font-size: 1.25vw;
+    line-height: 1.6vw;
+    border: 1px solid #121212;
+    padding: 0.41vw 1.04vw;
+    position: absolute;
+    left: 50%; transform: translate(-50%, -50%);
+}
+.mainIndexRightTab {
+    width: 45.83vw;
+    padding: 6.25vw 5px 1.45vw 5px;
+    background: #fff;
+    position: sticky;
+    top: 0;
+}
+.mainIndex-2 .mainIndexRight_imgWrap{
+    padding: 2px;
+}
+.mainIndex-2 .mainIndexRight_imgWrap img{
+    width: 45vw;
+    /* width: calc(100vw * 990px/1920) */
+}
 
+.mainIndex_BgText{
+    width: 100%;
+    height: 25.67vw;
+    position: absolute;
+    background-image: url("../asset/background/AllNewHallym.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.mainIndex-3{
+    padding: 16vw 0 ;
+}
+.mainIndex-3 h2 span{
+    font-family: "Pretendard Variable";
+    font-size: 3.33vw;
+    font-weight: 700;
+    line-height: 3.75vw;
+    background: linear-gradient(to right top, #1C72F2, #10CEC5);
+    color: transparent;
+    background-clip: text;
+}
+.mainIndex-3 h2 {
+    font-family: "Pretendard Variable";
+    font-size: 3.33vw;
+    font-weight: 700;
+    line-height: 3.75vw;
+    color: #121212;
+    text-align: center; 
+    margin-bottom: 4.16vw; 
+}
+
+.mainIndex_CarouselWrap_top{
+    width: 100%;
+    height: 390px;
+    background-color: #10CEC5;
+}
+.mainIndex_CarouselWrap_bottom{
+    margin-top: 7.8vw;
+    width: 100%;
+    height: 570px;
+    background-color: #1C72F2;
+}
+
+.mainIndex-4, .mainIndex-5{
+    height: 100vh;
+    position: relative;
+}
+.mainIndex_VideoWrap{
+    position: relative;
+}
+.mainIndex_VideoWrap img{
+    position: absolute;
+    width: 26vw;
+    top: 24vw;
+    right: 2.08vw;
+}
+.mainIndex_VideoWrap .mainIndex_Video{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover ;
+}
+
+.mainIndex-6{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 6.14vw;
+    padding: 7.8vw 6.25vw 2vw 6.25vw;
+    width: 100%;
+    height: auto;
+    background-image: url("../asset/MainIndex/sns_section_bg.png");
+    background-repeat:repeat;
+    background-size: cover;
+
+}
+.mainIndex_snsNav{
+    width: 15.9vw;
+    position: sticky;
+    top: 7.8vw;
+}
+
+.snsFlex_ColumnWrap{
+    display: flex;
+    flex-direction: row;
+    gap: 2.8vw;
+    margin-bottom: 7.8vw;
+}
+.snsFlex_RowWrap{
+    display:flex;
+    flex-direction: column;
+    gap: 2.8vw;
+
+}
+.snsFlex_RowWrap img{
+    width:20.41vw;
+}
+
+.gridItem_mt_40{
+    padding-top: 2.98vw;
+}
+.gridItem_mt_160{
+    margin-top: 8.33vw;
 }

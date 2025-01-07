@@ -37,3 +37,6 @@ button {
     overflow: visible;
     cursor: pointer;
 }
+div{
+    font-size: 0;
+}
