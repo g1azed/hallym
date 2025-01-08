@@ -71,14 +71,14 @@
                 </div>
             
                 <!-- Section 3 -->
-                <div class="section mainSection-3">
+                <div class="section  mainSection-3">
                     <h2>Section 3</h2>
                 </div>
             </div>
 
         </div>
 
-        <div class="mainIndex-2">
+        <div class="mainIndex-2 mainIndex_w">
             <div class="mainIndexLeft">
                 <img src="./asset/MainIndex/stickySection/collegue_bg.png" />
             </div>
@@ -96,7 +96,7 @@
         </div>
 
         <div class="mainIndex_BgText"></div>
-        <div class="mainIndex-3">
+        <div class="mainIndex-3 mainIndex_w">
             <h2> <span> HALLYM IN </span> <br/>
                 RESEARCH STORY 
             </h2>
@@ -104,7 +104,7 @@
             <div class="mainIndex_CarouselWrap_bottom"></div>
         </div>
 
-        <div class="mainIndex-4">
+        <div class="mainIndex-4 mainIndex_w">
             <div class="mainIndex_VideoWrap"> 
                 <video class="mainIndex_Video" src="https://s3-figma-videos-production-sig.figma.com/video/1093692944360466835/TEAM/58eb/e31f/-53fa-4784-b7cc-843f19b38838?Expires=1737331200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=SWejhyHCgyvzzce~n2a97-RMr37amjmUvZUfA-wH~qEJjVYCKhCMUnu6Ywp8j83HrWJEFi2ejnbAjwfZY~zXslmuYVLjhPhPajGXMk~4iqQd5ypQf9RRS2lm5XYXLepd8DFjVS8Mxm7upBDOUcN8TLM8lC8T7ieI5kmRfWrwkdPETb8dY-foxwZ0QWT28gSKA699KAoZNrf-fonWAMi8xizxikgII4aWh8M5o0DOkATgiCm3~YKZGPlqbdmW7p3FMN7tjy48MwnoWNp3qNIXItQtT8rWavRspOGhFsyfP0yZZs-xFYPCK7zhvLONKJ2dkJHzmBWQqZ1fukyE-PvByg__"
                 preload="auto" autoplay="autoplay" loop="loop" muted="muted" volume="0"></video>
@@ -112,7 +112,7 @@
             </div>
         </div>
 
-        <div class="mainIndex-5">
+        <div class="mainIndex-5 mainIndex_w">
             <div class="mainIndex_VideoWrap"> 
                 <video class="mainIndex_Video" src="https://s3-figma-videos-production-sig.figma.com/video/1093692944360466835/TEAM/ed36/1704/-cd1a-43df-9166-04cced4026c7?Expires=1737331200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=keMAUOgEfNJdF9aSqHk33UX6UvCqULI8CQ8ReWWjmF7Ah9Beff0riNMrQDo4OxcAED5HUtnQPpvRPHv5bcRL~hAH0mtpq6gH4CsWX1vagEhxrPgVv4GQPQGxoWwLirdCvmOwSe7phTE0LpaaYtfeHqsjckwHnNRJsLIwrni4~IEnfLKRpjO3rhqQP6g0AHlINzEPnyv3H44OMigAJC-Ux~sH474n7md6ahMbL4lGs5Asp-gYvbRkuNAVmlV5OTZqWrHHflzX0uqbfkUunb96g9LSKUP6xf-mM6u4Ys7~UjxwRcWCX9UPPC-RIzEbM2VqIs9mxt~pDnX3VuHevZSucg__"
                 preload="auto" autoplay="autoplay" loop="loop" muted="muted" volume="0"></video>
@@ -151,22 +151,25 @@
     <script>
 
 
-new fullpage('#fullpage', {
-    scrollBar: true,
-    navigation: true,
-    onLeave: function (origin, destination, direction) {
-        const content1 = document.querySelector('.mainSectionContent-1');
-        const content2 = document.querySelector('.mainSectionContent-2');
+        new fullpage('#fullpage', {
+            scrollBar: true,
+            navigation: false,
+            onLeave: function (origin, destination, direction) {
+                const content1 = document.querySelector('.mainSectionContent-1');
+                const content2 = document.querySelector('.mainSectionContent-2');
+                const mainBg2 = document.querySelector('.mainSection-2_Bg');
 
-        if (destination.index === 2) { // mainSection-3로 이동할 때
-            content1.classList.add('hidden'); // mainSectionContent-1 fadeOut
-            content2.classList.add('visible'); // mainSectionContent-2 fadeIn
-        } else if (origin.index === 2 && destination.index === 1) { // mainSection-2로 돌아갈 때
-            content1.classList.remove('hidden'); // mainSectionContent-1 다시 보이기
-            content2.classList.remove('visible'); // mainSectionContent-2 숨김
-        }
-    }
-});
+                if (destination.index === 2) { // mainSection-3로 이동할 때
+                    content1.classList.add('hidden'); // mainSectionContent-1 fadeOut
+                    content2.classList.add('visible'); // mainSectionContent-2 fadeIn
+                } else if (origin.index === 2 && destination.index === 1) { // mainSection-2로 돌아갈 때
+                    content1.classList.remove('hidden'); // mainSectionContent-1 다시 보이기
+                    content2.classList.remove('visible'); // mainSectionContent-2 숨김
+                }else if(origin.index > 2){
+                    content2.classList.add('hidden');  
+                }
+            }
+        });
 
         
     </script>
