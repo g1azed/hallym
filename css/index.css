@@ -79,33 +79,34 @@ main{
 }
 
 
-
+.mainIndex-2 {
+    position: relative;    
+}
 .mainIndex_w{
     background-color: #fff;
 }
-.mainIndex-2{
-
-    height: 170.66vw;
+.mainIndex2_Wrap{
     display: flex;
     flex-shrink: 1;
     gap: 2.08vw;
-    padding-bottom :15.36vw;
 }
 .mainIndex-2 .mainIndexLeft img{
     width: 50vw;
     position: sticky;
     top:0;
+    padding-bottom: 13vw;
 }
 
 .mainIndex-2 .mainIndexRight{
-    height: 150vw;
+    height: auto;
 }
 .mainIndexRight_btnWrap {
     width: 100%;
     margin-top: 4.16vw;
     position: relative;
 }
-.mainIndex-2 .mainIndexRight button{
+
+.mainIndex-2 .mainIndexRight_btnWrap button{
     font-family: "Pretendard Variable";
     font-weight: 500;
     font-size: 1.25vw;
@@ -114,6 +115,8 @@ main{
     padding: 0.41vw 1.04vw;
     position: absolute;
     left: 50%; transform: translate(-50%, -50%);
+    background-color: #fff;
+    z-index: 2;
 }
 .mainIndexRightTab {
     width: 45.83vw;
@@ -121,27 +124,30 @@ main{
     background: #fff;
     position: sticky;
     top: 0;
+    margin-bottom: 13.2vw;
 }
 .mainIndex-2 .mainIndexRight_imgWrap{
     padding: 2px;
-    overflow: hidden;
+    /* overflow: hidden;*/
     height: auto; 
     /* display: flex; */
 }
 .mainIndex-2 .mainIndexRight_imgWrap img{
     width: 45vw;
+    
 }
 
 .mainIndex_BgText{
-    width: 100%;
+    width: 100vw;
     height: 25.67vw;
     position: absolute;
+    bottom: -20vw;
     background-image: url("../asset/background/AllNewHallym.png");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
 }
 .mainIndex-3{
-    padding: 16vw 0 ;
+    margin-top: 9.375rem;
 }
 .mainIndex-3 h2 span{
     font-family: "Pretendard Variable";
@@ -234,4 +240,10 @@ main{
 }
 .gridItem_mt_160{
     margin-top: 8.33vw;
+}
+
+
+/* mobile */
+@media (max-width: 375px ){
+    
 }

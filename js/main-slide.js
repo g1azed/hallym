@@ -15,7 +15,7 @@ function moveToNext() {
     }
 
     // translateX를 이용해 슬라이드 이동
-    const translateXValue = -100 * currentIndex;
+    const translateXValue = -50 * currentIndex;
     carousel.style.transform = `translateX(${translateXValue}%)`;
 }
 
@@ -45,7 +45,8 @@ carousel.addEventListener('mousemove', (e) => {
 // 자동 슬라이드 (무한 루프)
 setInterval(() => {
     moveToNext();
-}, 3000); // 3초마다 슬라이드 이동
+}, 3000); 
+// 3초마다 슬라이드 이동
 
 // 초기 상태 설정
 carousel.style.transform = 'translateX(0%)';
