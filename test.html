@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fullpage Scroll</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    #fullpage {
+      height: 100vh;
+    }
+
+    .section {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      position: relative;
+      height: 100vh; /* Ensure sections take up full viewport height */
+    }
+
+    .section1-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .section2-content {
+      position: absolute;
+      top: 60%;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      padding: 20px;
+      border-radius: 10px;
+      z-index: 0;
+    }
+
+    #section2, #section3 {
+      background-color: #3498db;
+    }
+
+    #section4 {
+      background-color: #9b59b6;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="fullpage">
+    <!-- Section 1 - Section 2 content 포함 -->
+    <div class="section" id="section1">
+      <div class="section1-content">
+        <h2>Section 1</h2>
+        <p>This is Section 1 content.</p>
+      </div>
+      <div class="section2-content">
+        <h3>Section 2 Content</h3>
+        <p>This content appears with Section 1 and Section 2.</p>
+      </div>
+    </div>
+    
+    <!-- Section 2 -->
+    <div class="section" id="section2">
+      <div class="content">
+        <h2>Section 2</h2>
+        <p>This is Section 2 content.</p>
+      </div>
+    </div>
+    
+    <!-- Section 3 -->
+    <div class="section" id="section3">
+      <div class="content">
+        <h2>Section 3</h2>
+        <p>This is Section 3 content.</p>
+      </div>
+    </div>
+    
+    <!-- Section 4 -->
+    <div class="section" id="section4">
+      <div class="content">
+        <h2>Section 4</h2>
+        <p>This is Section 4 content.</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.js"></script>
+  <script>
+    new fullpage('#fullpage', {
+      autoScrolling: true, // 페이지 스크롤을 자동으로 할 수 있게 설정
+      scrollHorizontally: false, // 수평 스크롤 비활성화
+      navigation: true, // 네비게이션 버튼 활성화
+      navigationPosition: 'left', // 네비게이션 위치
+      loopBottom: true, // 마지막 섹션에서 처음으로 돌아오는 설정
+      afterLoad: function(origin, destination, direction){
+        console.log('섹션 ' + destination.index + ' 로드됨');
+      },
+    });
+  </script>
+</body>
+</html>

@@ -46,25 +46,30 @@
     </header>
     <main>
         <div class="mainIndex-1">
-            <!-- <div id="fullpage">
-                <div class="mainSection_1">
-                    <div class="section fp-auto-height mainSectionContent_1">
+            <div id="fullpage">
+                <div class="section mainSection-1">
+                    <div class="mainSectionContent-1">
                         <img class="mainSectionTextImg" src="./asset/MainIndex/MainSectionText.png" alt="ALL NEW HALLYM"/>
                         <div class="mainSectionBtnWrap">
-                            <div><img src="./asset/Button/BottomBotton.svg" /></div>
-                            <button><img src="./asset/Button/ChatBotButton.svg" /></button>
+                            <button> <img src="./asset/MainIndex/Button/BottomBotton.svg" /> </button>
+                            <button> <img src="./asset/MainIndex/Button/ChatBotButton.svg" /> </button>
                         </div>
                     </div>
                 </div>
-                <div class="section mainSection_2">
-                    <div class="mainSectionContent_2">
-                        <h2>Hallym Mission</h2>
-                        <p>한림대학은 1982년 건학 이래 '풍부한 인간성과 창조적 지성을 지닌 인재를 양성하고, <br/>
+
+                <div class="section mainSection-2">
+                    <div class="mainSectionContent-2">
+                        <h2> Hallym Mission </h2>
+                        <p> 한림대학은 1982년 건학 이래 '풍부한 인간성과 창조적 지성을 지닌 인재를 양성하고, <br/>
                             학술 및 문화의 진흥을 도모'함으로써 '개인의 성장, 사회의 발전, 국가의 번영, <br/>
                             인류의 행복에 기여함'을 실현하기 위해 매진해 왔습니다.</p>
-                    </div>
+                        <button> <img src="./asset/MainIndex/hallymMissionBtn.png" /></button>
+                    </div> 
                 </div>
-            </div> -->
+                
+
+            </div>
+    
         </div>
 
         <div class="mainIndex-2 mainIndex_w">
@@ -79,7 +84,7 @@
                     <img src="./asset/MainIndex/stickySection/sticky_group.png" />
                 </div>
                 <div class="mainIndexRight_btnWrap">
-                    <button type="button" href="/"> More View </button>
+                    <button type="button" id="moreViewBtn"> More View </button>
                 </div>
             </div>
         </div>
@@ -105,7 +110,49 @@
                             <button type="button" class="carouselMore_Btn"> More View <img src="./asset/buttonArrowIcon.svg" /></button>
                         </div>
                     </div>
-                    
+                    <div class="carouselTop_Cell"> 
+                        <img class="carouselTop_img" src="./asset/carousel/carousel_img1.png" />
+                        <div class="top_CellText">
+                            <h4> [시리즈] 한림대학교의 동아리를 찾아서
+                                ⑧ 연극·뮤지컬 동아리, 한림극회 
+                            </h4> 
+                            <p> 
+                                여러분의 대학 로망은 무엇인가요? CC? 아니면.. MT?
+                                여러 가지 로망이 있겠지만, 대학 생활하면 역시 '동아리'를 빼놓을 수 없죠.
+                                오늘의 동아리는 바로 교내 연극·뮤지컬 중앙 동아리, 한림극회입니다!
+                            </p>
+                            <button type="button" class="carouselMore_Btn"> More View <img src="./asset/buttonArrowIcon.svg" /></button>
+                        </div>
+                    </div>
+                    <div class="carouselTop_Cell"> 
+                        <img class="carouselTop_img" src="./asset/carousel/carousel_img1.png" />
+                        <div class="top_CellText">
+                            <h4> [시리즈] 한림대학교의 동아리를 찾아서
+                                ⑧ 연극·뮤지컬 동아리, 한림극회 
+                            </h4> 
+                            <p> 
+                                여러분의 대학 로망은 무엇인가요? CC? 아니면.. MT?
+                                여러 가지 로망이 있겠지만, 대학 생활하면 역시 '동아리'를 빼놓을 수 없죠.
+                                오늘의 동아리는 바로 교내 연극·뮤지컬 중앙 동아리, 한림극회입니다!
+                            </p>
+                            <button type="button" class="carouselMore_Btn"> More View <img src="./asset/buttonArrowIcon.svg" /></button>
+                        </div>
+                    </div>
+                    <div class="carouselTop_Cell"> 
+                        <img class="carouselTop_img" src="./asset/carousel/carousel_img1.png" />
+                        <div class="top_CellText">
+                            <h4> [시리즈] 한림대학교의 동아리를 찾아서
+                                ⑧ 연극·뮤지컬 동아리, 한림극회 
+                            </h4> 
+                            <p> 
+                                여러분의 대학 로망은 무엇인가요? CC? 아니면.. MT?
+                                여러 가지 로망이 있겠지만, 대학 생활하면 역시 '동아리'를 빼놓을 수 없죠.
+                                오늘의 동아리는 바로 교내 연극·뮤지컬 중앙 동아리, 한림극회입니다!
+                            </p>
+                            <button type="button" class="carouselMore_Btn"> More View <img src="./asset/buttonArrowIcon.svg" /></button>
+                        </div>
+                    </div>
+
                 </div>
             </div>
             <div class="mainIndex_CarouselWrap_bottom"></div>
@@ -154,9 +201,15 @@
         <img src="./asset/footer/Footer-pc.png" />
     </footer>
 
-
+    <script src="./js/main-slide.js"></script>
     <script>
+        document.getElementById('moreViewBtn').addEventListener('click', function() {
+            const imgWrap = document.querySelector('.mainIndexRight_imgWrap');
+            const newImg = document.createElement('img');
+            newImg.src = './asset/MainIndex/stickySection/sticky_group.png';
+            imgWrap.appendChild(newImg);
 
+        });
 
         new fullpage('#fullpage', {
             scrollBar: true,
@@ -187,4 +240,6 @@
 
 
 </html>
+
+
 

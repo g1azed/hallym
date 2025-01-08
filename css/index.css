@@ -8,44 +8,65 @@
 main{
     width: 100%;
     font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    transition: transform 0.8s ease-in-out;
 }
 
-.mainIndex-1{
-    width: auto;
-    height: 300vh;
-    position: relative;
-}
 
-.mainSection_1{
-    width: 100%;
-    height: 200vh;
-    background-image: url("../asset/background/MainSectionFull.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-.mainSection_2{
-    width: 100%;
+.section {
+    width: 100vw;
     height: 100vh;
-    background-image: url("../asset/background/MainSectionBottom.png");
+}
+.mainSection-1{
+    width: 100%;
+    background-image: url('../asset/background/MainSectionTop.png');
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-.mainSectionContent_1{
-    height: 200vh;
+.mainSectionContent-1{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mainSectionTextImg{
+    object-fit: contain;
+    width: 50vw;
+    margin: 0 auto;
+}
+
+.mainSectionBtnWrap{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 4.16vw 4.16vw 6.25vw;
 }
 
 
+.mainSection-2{
+    background-image: url('../asset/background/MainSectionBottom.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.mainSectionContent-2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2.08vw;
+}
 
-.mainSectionContent_2 h2{
+.mainSectionContent-2 h2{
     font-family: "IBM Plex Sans KR", serif;
     font-weight: 700;
     font-size: 4.16vw;
     line-height: 4.7vw ;
     color: #fff;
-    margin-bottom: 2.08vw;
 }
-.mainSectionContent_2 p{
+.mainSectionContent-2 p{
     font-family: "Pretendard Variable";
     font-weight: 400;
     font-size: 1.25vw;
@@ -53,17 +74,10 @@ main{
     color: #fff;
     text-align: center;
 }
-.mainSectionTextImg{
-    object-fit: contain;
-    width: 50vw;
-    margin: 0 auto 0 auto;
+#fp-nav, .fp-controlArrow, .fp-watermark {
+    display: none !important;
 }
-.mainSectionBtnWrap{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 4.16vw 4.16vw 6.25vw;
-}
+
 
 
 .mainIndex_w{
@@ -110,6 +124,9 @@ main{
 }
 .mainIndex-2 .mainIndexRight_imgWrap{
     padding: 2px;
+    overflow: hidden;
+    height: auto; 
+    /* display: flex; */
 }
 .mainIndex-2 .mainIndexRight_imgWrap img{
     width: 45vw;
