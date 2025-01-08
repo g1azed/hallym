@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./reset.css">
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/carousel.css">
 
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
@@ -45,12 +46,9 @@
     </header>
     <main>
         <div class="mainIndex-1">
-
-            <div id="fullpage">
-                <!-- Section 1 -->
-                <div class="section mainSection-1">
-                    <div class="mainSection-1_Bg"></div>
-                    <div class="mainSectionContent-1">
+            <!-- <div id="fullpage">
+                <div class="mainSection_1">
+                    <div class="section fp-auto-height mainSectionContent_1">
                         <img class="mainSectionTextImg" src="./asset/MainIndex/MainSectionText.png" alt="ALL NEW HALLYM"/>
                         <div class="mainSectionBtnWrap">
                             <div><img src="./asset/Button/BottomBotton.svg" /></div>
@@ -58,24 +56,15 @@
                         </div>
                     </div>
                 </div>
-            
-                <!-- Section 2 -->
-                <div class="section mainSection-2">
-                    <div class="mainSection-2_Bg"></div>
-                    <div class="mainSectionContent-2">
+                <div class="section mainSection_2">
+                    <div class="mainSectionContent_2">
                         <h2>Hallym Mission</h2>
                         <p>한림대학은 1982년 건학 이래 '풍부한 인간성과 창조적 지성을 지닌 인재를 양성하고, <br/>
                             학술 및 문화의 진흥을 도모'함으로써 '개인의 성장, 사회의 발전, 국가의 번영, <br/>
                             인류의 행복에 기여함'을 실현하기 위해 매진해 왔습니다.</p>
                     </div>
                 </div>
-            
-                <!-- Section 3 -->
-                <div class="section  mainSection-3">
-                    <h2>Section 3</h2>
-                </div>
-            </div>
-
+            </div> -->
         </div>
 
         <div class="mainIndex-2 mainIndex_w">
@@ -100,7 +89,25 @@
             <h2> <span> HALLYM IN </span> <br/>
                 RESEARCH STORY 
             </h2>
-            <div class="mainIndex_CarouselWrap_top"></div>
+            <div class="mainIndex_CarouselWrap_top">
+                <div class="carouselTop">
+                    <div class="carouselTop_Cell"> 
+                        <img class="carouselTop_img" src="./asset/carousel/carousel_img1.png" />
+                        <div class="top_CellText">
+                            <h4> [시리즈] 한림대학교의 동아리를 찾아서
+                                ⑧ 연극·뮤지컬 동아리, 한림극회 
+                            </h4> 
+                            <p> 
+                                여러분의 대학 로망은 무엇인가요? CC? 아니면.. MT?
+                                여러 가지 로망이 있겠지만, 대학 생활하면 역시 '동아리'를 빼놓을 수 없죠.
+                                오늘의 동아리는 바로 교내 연극·뮤지컬 중앙 동아리, 한림극회입니다!
+                            </p>
+                            <button type="button" class="carouselMore_Btn"> More View <img src="./asset/buttonArrowIcon.svg" /></button>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
             <div class="mainIndex_CarouselWrap_bottom"></div>
         </div>
 
@@ -154,21 +161,21 @@
         new fullpage('#fullpage', {
             scrollBar: true,
             navigation: false,
-            onLeave: function (origin, destination, direction) {
-                const content1 = document.querySelector('.mainSectionContent-1');
-                const content2 = document.querySelector('.mainSectionContent-2');
-                const mainBg2 = document.querySelector('.mainSection-2_Bg');
+            // onLeave: function (origin, destination, direction) {
+            //     const content1 = document.querySelector('.mainSectionContent-1');
+            //     const content2 = document.querySelector('.mainSectionContent-2');
+            //     const mainBg2 = document.querySelector('.mainSection-2_Bg');
 
-                if (destination.index === 2) { // mainSection-3로 이동할 때
-                    content1.classList.add('hidden'); // mainSectionContent-1 fadeOut
-                    content2.classList.add('visible'); // mainSectionContent-2 fadeIn
-                } else if (origin.index === 2 && destination.index === 1) { // mainSection-2로 돌아갈 때
-                    content1.classList.remove('hidden'); // mainSectionContent-1 다시 보이기
-                    content2.classList.remove('visible'); // mainSectionContent-2 숨김
-                }else if(origin.index > 2){
-                    content2.classList.add('hidden');  
-                }
-            }
+            //     if (destination.index === 2) { // mainSection-3로 이동할 때
+            //         content1.classList.add('hidden'); // mainSectionContent-1 fadeOut
+            //         content2.classList.add('visible'); // mainSectionContent-2 fadeIn
+            //     } else if (origin.index === 2 && destination.index === 1) { // mainSection-2로 돌아갈 때
+            //         content1.classList.remove('hidden'); // mainSectionContent-1 다시 보이기
+            //         content2.classList.remove('visible'); // mainSectionContent-2 숨김
+            //     }else if(origin.index > 2){
+            //         content2.classList.add('hidden');  
+            //     }
+            // }
         });
 
         

@@ -1,0 +1,49 @@
+
+
+
+.carouselTop_Cell{
+    display: flex;
+    flex-direction: row;
+    gap: 2.08vw;
+}
+.carouselTop_img{
+    object-fit: contain;
+    width: 20.31vw;
+}
+.top_CellText{
+    width: 33.33vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.top_CellText h4{
+    font-family: "Pretendard Variable";
+    font-weight: 700;
+    font-size: 1.66vw;
+    line-height: 2.08vw;
+    padding-bottom: 0.83vw;
+}
+.top_CellText p{
+    font-family: "Pretendard Variable";
+    font-weight: 500;
+    font-size: 0.83vw;
+    line-height: 1.25vw;
+    padding-bottom: 1.66vw;
+}
+.carouselMore_Btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.625vw;
+    padding: 0.625vw 1.04vw;
+    border: 1px solid #121212;
+    font-family: "Pretendard Variable";
+    font-weight: 400;
+    font-size: 0.93vw;
+    line-height: 1.35vw;
+}
+.carouselMore_Btn img{
+    width: 1.25vw;
+    object-fit: contain;
+}

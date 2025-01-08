@@ -20,13 +20,15 @@ header{
     justify-content: center;
     align-items: center;
     gap: 2.5vw;
+    background-blend-mode: difference;
 }
 
 .headerContentList li{
-    color: #fff;
+    color: #121212;
     font-size: 0.83vw;
     font-weight: 500;
     line-height: 1.25vw;
+    background-blend-mode: difference;
 }
 
 .headerIconWrap{

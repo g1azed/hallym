@@ -1,0 +1,88 @@
+.vision_section{
+    width: 100%;
+    height: 100vh;
+}
+.vision_section_1{
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 6.25vw;
+}
+
+.v_sec1_text{
+    z-index: 99;
+    height: auto;
+    position: sticky;
+    top: 25rem;
+    color: black;
+    /* clip-path: inset(100% 0 0); */
+    transition: clip-path 0.1s ease; /* 부드러운 애니메이션 효과 */
+}
+
+.vision_main_text80{
+    font-family: "IBM Plex Sans KR", serif;
+    font-weight: 900;
+    font-size: 4.16vw;
+    line-height: 6.25vw;
+    color: black;
+
+}
+
+.vision_sub_text18{
+    font-family: "Pretendard Variable";
+    font-weight: 500;
+    font-size:0.93vw;
+    line-height: 1.35vw;
+}
+
+/* 스크롤링 이미지 */
+.scrolling_img_Wrap{
+    position: relative;
+    height: 50vh;
+}
+.scrolling_img{
+    position: absolute;
+    width: 40%;
+    top: 0; left: 50%;
+    transform: translate(-50%, -50%);
+    transition : 0.3s ease-in-out
+}
+
+
+.v_sec2_text{
+    width: 43.785vw;
+    position: absolute;
+    left: 50%;
+}
+.vision_sub_text32{
+    font-family: "Pretendard Variable";
+    font-weight: 700;
+    font-size: 1.66vw;
+    line-height: 2.58vw;
+    padding-bottom: 2.08vw;
+}
+.vision_sub2_text18{
+    color: #666;
+    font-family: "Pretendard Variable";
+    font-weight: 500;
+    font-size:0.93vw;
+    line-height: 1.35vw;
+    padding-bottom: 1.04vw;
+}
+.vision_sub2_text18 > strong{
+    font-weight: 700;
+}
+
+.vision_section_3, .vision_section_4{
+    max-width: 100%;
+    height: auto;
+}
+.vision_section_3 > img, .vision_section_4 > img{
+    object-fit: contain;
+    width: 100%;
+    height: auto;
+}
+.vision_section_4 > img{
+    padding: 6.25vw;
+}
