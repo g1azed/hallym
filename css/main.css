@@ -1,0 +1,462 @@
+/* .ibm-plex-sans-kr-regular {
+    font-family: "IBM Plex Sans KR", serif;
+    font-weight: 400;
+    font-style: normal;
+  } */
+.m_display{
+    display: none;
+}
+
+main{
+    width: 100%;
+    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    transition: transform 0.8s ease-in-out;
+}
+
+
+.section {
+    width: 100vw;
+    height: 100vh;
+}
+.mainIndex-1{
+    background-position: top;
+}
+.mainSection-1{
+    width: 100%;
+    background-image: url('../asset/background/MainSectionTop.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.mainSectionContent-1{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mainSectionTextImg{
+    object-fit: contain;
+    width: 50vw;
+    margin: 0 auto;
+}
+
+.mainSectionBtnWrap{
+    background-image: none;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6.56vw 4.16vw 4.16vw 6.25vw;
+}
+
+
+.mainSection-2{
+    width: 100%;
+    background-image: url('../asset/background/MainSectionBottom.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.mainSectionContent-2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2.08vw;
+    padding: 303px;
+}
+
+.mainSectionContent-2 h2{
+    font-family: "IBM Plex Sans KR", serif;
+    font-weight: 700;
+    font-size: 4.16vw;
+    line-height: 4.7vw ;
+    color: #fff;
+}
+.mainSectionContent-2 p{
+    font-family: "Pretendard Variable";
+    font-weight: 400;
+    font-size: 1.25vw;
+    line-height: 1.6vw;
+    color: #fff;
+    text-align: center;
+    padding: 0 250px;
+    text-wrap: pretty;
+    word-break: keep-all;
+}
+#fp-nav, .fp-controlArrow, .fp-watermark {
+    display: none !important;
+}
+
+
+.mainIndex-2 {
+    position: relative;    
+}
+.mainIndex_w{
+    background-color: #fff;
+}
+.mainIndex2_Wrap{
+    display: flex;
+    flex-shrink: 1;
+    gap: 2.08vw;
+}
+.mainIndex-2 .mainIndexLeft img{
+    width: 50vw;
+    position: sticky;
+    top:0;
+    padding-bottom: 13vw;
+}
+
+.mainIndex-2 .mainIndexRight{
+    height: auto;
+}
+.mainIndexRight_btnWrap {
+    width: 100%;
+    margin-top: 4.16vw;
+    position: relative;
+}
+
+.mainIndex-2 .mainIndexRight_btnWrap button{
+    font-family: "Pretendard Variable";
+    font-weight: 500;
+    font-size: 1.25vw;
+    line-height: 1.6vw;
+    border: 1px solid #121212;
+    padding: 0.41vw 1.04vw;
+    position: absolute;
+    left: 50%; transform: translate(-50%, -50%);
+    background-color: #fff;
+    z-index: 2;
+}
+.mainIndexRightTab {
+    width: 45.83vw;
+    padding: 6.25vw 5px 1.45vw 5px;
+    background: #fff;
+    position: sticky;
+    top: 0;
+    /* margin-bottom: 13.2vw; */
+}
+.mainIndex-2 .mainIndexRight_imgWrap{
+    padding: 2px;
+    /* overflow: hidden;*/
+    height: calc(600px+ auto); 
+    /* display: flex; */
+}
+.mainIndex-2 .mainIndexRight_imgWrap img{
+    width: 45vw;
+    
+}
+
+.mainIndex_BgText{
+    width: 100vw;
+    height: 25.67vw;
+    position: absolute;
+    bottom: -20vw;
+    background-image: url("../asset/background/AllNewHallym.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.mainIndex-3{
+    margin-top: 9.375rem;
+}
+
+.mainIndex-3 h2 span{
+    font-family: "Pretendard Variable";
+    font-size: 3.33vw;
+    font-weight: 700;
+    line-height: 3.75vw;
+    background: linear-gradient(to right top, #1C72F2, #10CEC5);
+    color: transparent;
+    background-clip: text;
+}
+.mainIndex-3 h2 {
+    font-family: "Pretendard Variable";
+    font-size: 3.33vw;
+    font-weight: 700;
+    line-height: 3.75vw;
+    color: #121212;
+    text-align: center; 
+    margin-bottom: 4.16vw; 
+}
+.mainIndex_3_Head{
+    position: relative;
+}
+/* button */
+.carouselTop_Btn_Wrap{
+    position: absolute;
+    right: 6.25vw; top:4.16vw;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.top_Arrow{
+    width: 3.33vw; height: 3.33vw;
+    border-radius: 50%;
+    display: flex; justify-content: center; align-items: center;
+    box-shadow: 0px 4px 4px 0px #0000001F;
+
+}
+.top_Arrow img{
+    width: 1.71vw;
+    object-fit: contain;
+}
+.top_prevArrow{
+    background-color: #fff;
+}
+.top_nextArrow{
+    background-color: #00EBE0;
+}
+
+/* 캐러셀 부분은 css 파일 따로 */
+.mainIndex-4, .mainIndex-5 {
+    height: 100vh;
+}
+.mainIndex_VideoWrapper{
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+.mainIndex_VideoWrap{
+    position: absolute;
+    width: 100%;
+}
+.mainIndex_VideoWrap video{
+    width: 100%;
+    object-fit: fill;  
+}
+.mainIndex_VideoWrapper img{
+    width: 26vw;
+    position: absolute;
+    top: 24vw;
+    right: 2.08vw;
+    z-index: 3;
+}
+
+.mainIndex-6{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 6.14vw;
+    padding: 7.8vw 6.25vw 2vw 6.25vw;
+    width: 100%;
+    height: auto;
+    background-image: url("../asset/MainIndex/sns_section_bg.png");
+    background-repeat:repeat;
+    background-size: cover;
+
+}
+.mainIndex_snsNav{
+    width: 15.9vw;
+    position: sticky;
+    top: 7.8vw;
+}
+
+.snsFlex_ColumnWrap{
+    display: flex;
+    flex-direction: row;
+    gap: 2.8vw;
+    margin-bottom: 7.8vw;
+}
+.snsFlex_RowWrap{
+    display:flex;
+    flex-direction: column;
+    gap: 2.8vw;
+
+}
+.snsFlex_RowWrap img{
+    width:20.41vw;
+}
+
+.gridItem_mt_40{
+    padding-top: 2.98vw;
+}
+.gridItem_mt_160{
+    margin-top: 8.33vw;
+}
+
+
+/* mobile */
+@media (max-width: 768px){
+    .m_display{
+        display: block;
+    }
+    .p_display{
+        display: none;
+    }
+    .mainIndex-1{
+        width: 100vw;
+        height: 100vh;
+        background-image: url('../asset/background/MainSectionFull.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: right;
+    }
+    .mainSection-1, .mainSection-2{
+        background-image: none;
+    }
+    .mainSection-1{
+        justify-content: flex-end !important;
+    }
+    .mainSectionTextImg{
+        margin-bottom: 38.66vw;
+        width: 85.33vw;
+    }
+    div.mainSectionBtnWrap{
+        justify-content: flex-end;
+        padding: 14.4vw 5.3vw;
+        background-image: url('../asset/scrolldown_m.svg');
+        background-repeat: no-repeat;
+        background-position: 50% 90%;
+    }
+
+    .mainSectionBtnWrap button:nth-child(1){
+        display: none;
+    }
+    .mainSectionBtnWrap button:nth-child(2){
+        background-image: none;
+    }
+    .mainSectionContent-2{
+        padding: 5.3vw;
+        gap: 3.2vw;
+    }
+    .mainSectionContent-2 h2{
+        font-size: 7.46vw;
+        line-height: 9.6vw ;
+    }
+    .mainSectionContent-2 p{
+        padding: 0;
+        font-size: 3.73vw;
+        line-height: 5.8vw;
+    }
+    .mainSectionContent-2 img{
+        margin-top: 5.2vw;
+        width: 35.2vw;
+    }
+    .mainIndex2_Wrap{
+        flex-direction: column;
+        gap: 0;
+    }
+    .mainIndex-2 .mainIndexLeft img{
+        width: 100%;  
+        padding-bottom: 0;
+    }
+    .mainIndexRight{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        background-image: url('../asset/MainIndex/stickySection/tab_bg_m.png');
+        background-position: 290% -5%;
+        background-repeat: no-repeat;
+        background-size: auto;
+    }
+    .mainIndexRightTab{
+        background: #fff;
+        padding: 10.66vw 0 5.3vw 0;
+        top: -10vw;
+    }
+    .mainIndex-2 .mainIndexRight_imgWrap img{
+        width: 100%;
+        /* margin-left: 10.66vw; */
+
+    }
+    .mainIndexRightTab {
+        /* margin-left: 10.66vw; */
+        width: 90% ;
+        position: sticky;
+    }
+
+    .mainIndex_BgText{
+        display: none;
+    }
+    .m_display.mainIndexRight_btnWrap button{
+        width: 89.33vw;
+        padding: 3.2vw 32vw; 
+        font-size: 3.73vw;
+        line-height: 5.86vw;
+        margin-top: 7.4vw;
+        position: absolute;
+        left: 50%; transform: translate(-50%, -50%);
+    }
+    .mainIndex-3{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .mainIndex-3 h2 span{
+        font-size: 7.46vw;
+        line-height: 9.6vw;
+    }
+    .mainIndex-3 h2 {
+        font-size: 7.46vw;
+        line-height: 9.6vw;
+        margin-bottom: 5.3vw;
+    }
+    .mainIndex_CarouselWrap_m{
+        display: flex !important; 
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 64px;
+        margin-bottom: 21.33vw;
+    }
+    
+    .mainIndex-4, .mainIndex-5 {
+        height: auto;
+    }
+    .mainIndex_VideoWrapper{
+        width: 100%;
+        height: auto;
+        position: static;
+    }
+    .mainIndex_VideoWrap{
+        position: static;
+        width: 100%;
+    }
+    .mainIndex_VideoWrap video{
+        width: 100%;
+        object-fit: fill;  
+    }
+    .mainIndex_VideoWrapper img{
+        width: 100vw;
+        position: static;
+        z-index: 3;
+    }
+    .mainIndex-6{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 6.14vw;
+        padding: 7.8vw 6.25vw 2vw 6.25vw;
+        width: 100%;
+        height: auto;
+        background-image: none;
+    }
+    .mainIndex_snsNav{
+        width: 100vw;
+        position: sticky;
+        top: -13vw;
+        padding: 0 0 6.4vw 5.3vw;
+        background: #fff;
+    }
+    .snsFlex_btnWrap button{
+        font-family: "Pretendard Variable";
+        font-weight: 500;
+        width: 89.33vw;
+        padding: 3.2vw 32vw; 
+        font-size: 3.73vw;
+        line-height: 5.86vw;
+        margin-top: 7.4vw;
+        border: 1px solid #121212;
+    }
+    
+    /* 탭 스크롤 반응 */
+    .tab-scroll-down {
+        transform: translateY(-100%);
+    }
+    .tab-scroll-up{
+        transform: translateY(0);
+    }
+}
