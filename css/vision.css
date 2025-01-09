@@ -77,18 +77,26 @@
 .vision_sub2_text18 > strong{
     font-weight: 700;
 }
+.vision_section_4{
 
-.vision_section_3, .vision_section_4{
-    max-width: 100%;
-    height: auto;
 }
-.vision_section_3 > img{
+.vision_section_3{
+    height: 56.25vw;
+    background-image: url("../asset/vision/vision_test.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-attachment: fixed;
+    background-position: center;
+}
+/* .vision_section_3 > img{
     object-fit: contain;
     width: 100%;
     height: auto;
-}
+} */
 
 .vision_section_4{
+    max-width: 100%;
+    height: auto;
     padding: 240px 120px 150px 120px;
     display: flex;
 }
