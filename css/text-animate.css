@@ -1,0 +1,53 @@
+
+/* 텍스트 opcity 0 */
+.headerWrap, .mainSectionBtnWrap{
+    opacity: 0;
+}
+
+
+/* 1. 텍스트 들어오기 */
+@keyframes text-in-from-left {
+    0%{ transform: translate(-125rem, 0);  opacity: 0;}
+    50%{  opacity: 1;}
+    100%{ transform: translate(0, 0);  opacity: 1;}
+}
+@keyframes text-in-from-top {
+    0%{ transform: translate(0, -120rem); opacity: 0;}
+    50%{  opacity: 1;}
+    100%{ transform: translate(0, 0); opacity: 1;}
+}
+@keyframes text-in-from-right {
+    0%{ transform: translate(125rem, 0); opacity: 0;}
+    50%{  opacity: 1;}
+    100%{ transform: translate(0, 0); opacity: 1;}
+}
+
+/* animation: name duration timing-function delay iteration-count direction fill-mode;/ */
+.mainText_Top p.mainText_Top_all{
+    opacity: 0;
+    transform: translate(0, 0);
+    animation: text-in-from-left 1s ease-in-out 1s forwards;
+}
+
+.mainText_Top .mainText_Top_quote{
+    opacity: 0;
+    transform: translate(0, 0);
+    animation: text-in-from-left 1s ease-in-out 1.5s forwards;
+}
+
+.mainText_Top p.mainText_Top_new{
+    opacity: 0;
+    transform: translate(0, 0);
+    animation: text-in-from-top 1.4s ease-in-out 3s forwards;
+}
+
+.mainText_Bottom p.mainText_Bottom_hallym{
+    opacity: 0;
+    transform: translate(0, 0);
+    animation: text-in-from-right 1.4s ease-in-out 3s forwards;
+}
+.mainText_Bottom .mainText_Bottom_quote{
+    opacity: 0;
+    transform: translate(0, 0);
+    animation: text-in-from-right 1.4s ease-in-out 5s forwards;
+}

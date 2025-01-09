@@ -2,10 +2,11 @@
     width: 100vw;
     height: 100vh;
     background-color: #ECF1F4;
-    
+    overflow-x: hidden;
 }
 .searchWrap img.search{
-    width: 74vw;
+    /* width: 74vw;/ */
+    height: 45.52vw;
     display: block;
     margin: 0 auto;
     padding-top: 6vw;

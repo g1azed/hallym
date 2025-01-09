@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/carousel.css">
+    <link rel="stylesheet" href="./css/text-animate.css">
 
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
@@ -25,8 +26,8 @@
 <body>
     <header>
         <div class="headerWrap">
-            <img class="p_display" src="./asset/hanrimLOGO.svg" alt="한림대학교 로고"/>
-            <img class="m_display" src="./asset/HanrimLogo_m.svg" alt="한림대학교 로고"/>
+            <img class="head_logo p_display" src="./asset/hanrimLOGO.svg" alt="한림대학교 로고"/>
+            <img class="head_logo m_display" src="./asset/HanrimLogo_m.svg" alt="한림대학교 로고"/>
 
             <ol class="headerContentList">
                 <li> 대학소개 </li>
@@ -57,7 +58,18 @@
             <div id="fullpage">
                 <div class="section mainSection-1">
                     <div class="mainSectionContent-1">
-                        <img class="mainSectionTextImg" src="./asset/MainIndex/MainSectionText.png" alt="ALL NEW HALLYM"/>
+                        <div class="mainSectionText">
+                            <div class="mainText_Top">
+                                <img class="mainText_Top_quote" src="./asset/MainIndex//mainQuotes.png" />
+                                <p class="mainText_Top_all"> ALL </p> 
+                                <p class="mainText_Top_new"> NEW </p>
+                            </div>
+                            <div class="mainText_Bottom">
+                                <p class="mainText_Bottom_hallym"> HALLYM </p>
+                                <img class="mainText_Bottom_quote" src="./asset/MainIndex//mainQuotes.png" />
+                            </div>
+                        </div>
+                        <!-- <img class="mainSectionTextImg" src="./asset/MainIndex/MainSectionText.png" alt="ALL NEW HALLYM"/> -->
                         <div class="mainSectionBtnWrap">
                             <button> <img src="./asset/MainIndex/Button/BottomBotton.svg" /> </button>
                             <button> <img src="./asset/MainIndex/Button/ChatBotButton.svg" /> </button>
@@ -325,7 +337,7 @@
             responsiveWidth: 769,  // 900px 이하의 넓이 화면에서는 autoScrolling 비활성화
             responsiveSlides: true,
             fitToSection: false, // 작은 화면에서 fitToSection 비활성화
-            parallax: true // 작은 화면에서의 부드러운 스크롤링
+            // parallax: true // 작은 화면에서의 부드러운 스크롤링
             // onLeave: function (origin, destination, direction) {
             //     const content1 = document.querySelector('.mainSectionContent-1');
             //     const content2 = document.querySelector('.mainSectionContent-2');
