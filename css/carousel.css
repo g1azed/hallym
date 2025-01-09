@@ -1,23 +1,76 @@
+.carouselTop {
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
 
+.carouselTop.slick-initialized .slick-slide { display: flex !important; margin-right: 2.08vw; }
+.carouselTop .slick-slide {
+    /* display: flex; */
+    transition: width 0.3s ease-in-out;
+    box-sizing: border-box;
+    opacity: 0.4;
+}
+
+.carouselTop .slick-current {
+    opacity: 1; /* 현재 슬라이드 강조 */
+}
+
+/* more button  */
+.carouselMore_Btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.625vw;
+    padding: 0.625vw 1.04vw;
+    border: 1px solid #121212;
+    font-family: "Pretendard Variable";
+    font-weight: 400;
+    font-size: 0.93vw;
+    line-height: 1.35vw;
+}
+.carouselMore_Btn img{
+    width: 1.25vw;
+    object-fit: contain;
+}
+
+/* top custom */
+.mainIndex_CarouselWrap_top{
+    width: 100%;
+    overflow: hidden;
+    /* transform: translateX(-100px); */
+}
 
 .carouselTop{
-    width: 100vw;
+    width: auto;
     display: flex;
     flex-direction: row;
-    overflow: hidden;
+    gap:2.8vw;
 }
 .carouselTop_Cell{
     display: flex;
     flex-direction: row;
+    flex: 1;
     gap: 2.08vw;
 }
 .carouselTop_img{
     object-fit: contain;
-    width: 20.31vw;
+    width: 19vw;
+}
+@keyframes fadeIn {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
 }
 .top_CellText{
+    animation: fadeIn 1s linear;
+    transition: all 0.3s ease-in-out;
+    display: none;
     width: 33.33vw;
-    display: flex;
+    /* display: flex; */
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
@@ -36,21 +89,70 @@
     line-height: 1.25vw;
     padding-bottom: 1.66vw;
 }
-.carouselMore_Btn{
+
+
+/* bottom custom  */
+.carouselBottom.slick-initialized .slick-slide { display: flex !important; margin-right: 2.08vw; }
+
+
+.mainIndex_CarouselWrap_bottom{
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    margin: 7.81vw 0;
+
+    /* cursor: pointer; */
+    /* transform: translateX(-100px); */
+}
+
+.carouselBottom_before{
+    width: 29.68vw;
+    height: 29.68vw;
+    border-radius: 50%;
+    border: 1px solid #0B908B;
+    position: absolute;
+    left: -13vw;
+}
+
+.carouselBottom{
+    transition: all 0.5s ease-in-out;
+    cursor: url('../asset/cursor.png') 0 0  ,auto;
+    position: absolute;
+    left: 20.83vw;
+    width: auto;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0.625vw;
-    padding: 0.625vw 1.04vw;
-    border: 1px solid #121212;
-    font-family: "Pretendard Variable";
-    font-weight: 400;
-    font-size: 0.93vw;
-    line-height: 1.35vw;
+    flex-direction: row;
+    gap:2.8vw;
 }
-.carouselMore_Btn img{
-    width: 1.25vw;
+.carouselBottom_Cell{
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    gap: 4.16vw;
+}
+.carouselBottom_img{
     object-fit: contain;
+    width: 29.68vw;
 }
 
-
+.Bottom_CellText{
+    width: 33.33vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.Bottom_CellText h4{
+    font-family: "Pretendard Variable";
+    font-weight: 700;
+    font-size: 1.66vw;
+    line-height: 2.08vw;
+    padding-bottom: 0.83vw;
+}
+.Bottom_CellText p{
+    font-family: "Pretendard Variable";
+    font-weight: 500;
+    font-size: 1.04vw;
+    line-height: 1.25vw;
+    padding-bottom: 1.66vw;
+}
