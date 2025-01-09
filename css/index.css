@@ -3,7 +3,9 @@
     font-weight: 400;
     font-style: normal;
   } */
-
+.m_display{
+    display: none;
+}
 
 main{
     width: 100%;
@@ -17,8 +19,6 @@ main{
     height: 100vh;
 }
 .mainIndex-1{
-    /* height: 200vh; */
-
     background-position: top;
 }
 .mainSection-1{
@@ -43,6 +43,7 @@ main{
 }
 
 .mainSectionBtnWrap{
+    background-image: none;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -130,12 +131,12 @@ main{
     background: #fff;
     position: sticky;
     top: 0;
-    margin-bottom: 13.2vw;
+    /* margin-bottom: 13.2vw; */
 }
 .mainIndex-2 .mainIndexRight_imgWrap{
     padding: 2px;
     /* overflow: hidden;*/
-    height: auto; 
+    height: calc(600px+ auto); 
     /* display: flex; */
 }
 .mainIndex-2 .mainIndexRight_imgWrap img{
@@ -204,25 +205,28 @@ main{
 }
 
 /* 캐러셀 부분은 css 파일 따로 */
-
-.mainIndex-4, .mainIndex-5{
+.mainIndex-4, .mainIndex-5 {
     height: 100vh;
+}
+.mainIndex_VideoWrapper{
+    width: 100%;
+    height: auto;
     position: relative;
 }
 .mainIndex_VideoWrap{
-    position: relative;
-}
-.mainIndex_VideoWrap img{
-    position: absolute;
-    width: 26vw;
-    top: 24vw;
-    right: 2.08vw;
-}
-.mainIndex_VideoWrap .mainIndex_Video{
     position: absolute;
     width: 100%;
-    height: 100vh;
-    object-fit: cover ;
+}
+.mainIndex_VideoWrap video{
+    width: 100%;
+    object-fit: fill;  
+}
+.mainIndex_VideoWrapper img{
+    width: 26vw;
+    position: absolute;
+    top: 24vw;
+    right: 2.08vw;
+    z-index: 3;
 }
 
 .mainIndex-6{
@@ -269,6 +273,179 @@ main{
 
 
 /* mobile */
-@media (max-width: 375px ){
+@media (max-width: 768px){
+    .m_display{
+        display: block;
+    }
+    .p_display{
+        display: none;
+    }
+    .mainIndex-1{
+        width: 100vw;
+        height: 100vh;
+        background-image: url('../asset/background/MainSectionFull.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: right;
+    }
+    .mainSection-1, .mainSection-2{
+        background-image: none;
+    }
+    .mainSection-1{
+        justify-content: flex-end !important;
+    }
+    .mainSectionTextImg{
+        margin-bottom: 38.66vw;
+        width: 85.33vw;
+    }
+    div.mainSectionBtnWrap{
+        justify-content: flex-end;
+        padding: 14.4vw 5.3vw;
+        background-image: url('../asset/scrolldown_m.svg');
+        background-repeat: no-repeat;
+        background-position: 50% 90%;
+    }
+
+    .mainSectionBtnWrap button:nth-child(1){
+        display: none;
+    }
+    .mainSectionBtnWrap button:nth-child(2){
+        background-image: none;
+    }
+    .mainSectionContent-2{
+        padding: 5.3vw;
+        gap: 3.2vw;
+    }
+    .mainSectionContent-2 h2{
+        font-size: 7.46vw;
+        line-height: 9.6vw ;
+    }
+    .mainSectionContent-2 p{
+        font-size: 3.73vw;
+        line-height: 5.8vw;
+    }
+    .mainSectionContent-2 img{
+        margin-top: 5.2vw;
+        width: 35.2vw;
+    }
+    .mainIndex2_Wrap{
+        flex-direction: column;
+        gap: 0;
+    }
+    .mainIndex-2 .mainIndexLeft img{
+        width: 100%;  
+        padding-bottom: 0;
+    }
+    .mainIndexRight{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        background-image: url('../asset/MainIndex/stickySection/tab_bg_m.png');
+        background-position: 290% -5%;
+        background-repeat: no-repeat;
+        background-size: auto;
+    }
+    .mainIndexRightTab{
+        background: #fff;
+        padding: 10.66vw 0 5.3vw 0;
+        top: -10vw;
+    }
+    .mainIndex-2 .mainIndexRight_imgWrap img{
+        width: 100%;
+        /* margin-left: 10.66vw; */
+
+    }
+    .mainIndexRightTab {
+        /* margin-left: 10.66vw; */
+        width: 90% ;
+        position: sticky;
+    }
+
+    .mainIndex_BgText{
+        display: none;
+    }
+    .m_display.mainIndexRight_btnWrap button{
+        width: 89.33vw;
+        padding: 3.2vw 32vw; 
+        font-size: 3.73vw;
+        line-height: 5.86vw;
+        margin-top: 7.4vw;
+        position: absolute;
+        left: 50%; transform: translate(-50%, -50%);
+    }
+    .mainIndex-3{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .mainIndex-3 h2 span{
+        font-size: 7.46vw;
+        line-height: 9.6vw;
+    }
+    .mainIndex-3 h2 {
+        font-size: 7.46vw;
+        line-height: 9.6vw;
+        margin-bottom: 5.3vw;
+    }
+    .mainIndex_CarouselWrap_m{
+        display: flex !important; 
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 64px;
+        margin-bottom: 21.33vw;
+    }
+    
+    .mainIndex-4, .mainIndex-5 {
+        height: auto;
+    }
+    .mainIndex_VideoWrapper{
+        width: 100%;
+        height: auto;
+        position: static;
+    }
+    .mainIndex_VideoWrap{
+        position: static;
+        width: 100%;
+    }
+    .mainIndex_VideoWrap video{
+        width: 100%;
+        object-fit: fill;  
+    }
+    .mainIndex_VideoWrapper img{
+        width: 100vw;
+        position: static;
+        z-index: 3;
+    }
+    .mainIndex-6{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 6.14vw;
+        padding: 7.8vw 6.25vw 2vw 6.25vw;
+        width: 100%;
+        height: auto;
+        background-image: none;
+    }
+    .mainIndex_snsNav{
+        width: 100vw;
+        position: sticky;
+        top: -13vw;
+        padding: 0 0 6.4vw 5.3vw;
+        background: #fff;
+    }
+    .snsFlex_btnWrap button{
+        font-family: "Pretendard Variable";
+        font-weight: 500;
+        width: 89.33vw;
+        padding: 3.2vw 32vw; 
+        font-size: 3.73vw;
+        line-height: 5.86vw;
+        margin-top: 7.4vw;
+        border: 1px solid #121212;
+    }
     
 }
+

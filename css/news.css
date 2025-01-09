@@ -73,3 +73,12 @@
     width: 100%;
     padding: 2.81vw 0 6.25vw 0;
 }
+
+@media (max-width: 768px){
+    .news_Full_Wrap_m{
+        width: 100vw;
+    } 
+    .news_Full_Wrap_m img{
+        width: 100vw;
+    } 
+}
