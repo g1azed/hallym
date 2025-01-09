@@ -64,6 +64,7 @@ main{
     justify-content: center;
     align-items: center;
     gap: 2.08vw;
+    padding: 303px;
 }
 
 .mainSectionContent-2 h2{
@@ -80,6 +81,9 @@ main{
     line-height: 1.6vw;
     color: #fff;
     text-align: center;
+    padding: 0 250px;
+    text-wrap: pretty;
+    word-break: keep-all;
 }
 #fp-nav, .fp-controlArrow, .fp-watermark {
     display: none !important;
@@ -321,6 +325,7 @@ main{
         line-height: 9.6vw ;
     }
     .mainSectionContent-2 p{
+        padding: 0;
         font-size: 3.73vw;
         line-height: 5.8vw;
     }
@@ -447,5 +452,11 @@ main{
         border: 1px solid #121212;
     }
     
+    /* 탭 스크롤 반응 */
+    .tab-scroll-down {
+        transform: translateY(-100%);
+    }
+    .tab-scroll-up{
+        transform: translateY(0);
+    }
 }
-
