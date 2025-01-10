@@ -11,8 +11,15 @@
 .m_display{
     display: none;
 }
+.img_hover{
+    transition-duration: 0.5s;
+}
+.img_hover:hover{
+    transform: scale(1.2, 1.2); transition-duration: 0.5s;
+}
 
 
+/* -----------------------------------------------------------  */
 main{
     width: 100%;
     font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
@@ -211,14 +218,6 @@ main{
     gap: 1.25vw; 
 }
 
-
-
-.img_hover{
-    transition-duration: 0.5s;
-}
-.img_hover:hover{
-    transform: scale(1.2, 1.2); transition-duration: 0.5s;
-}
 
 .sticky_img_group p {
     font-family: Pretendard;
