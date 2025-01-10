@@ -1,7 +1,7 @@
 
 /* 텍스트 opcity 0 */
 .headerWrap, .mainSectionBtnWrap{
-    opacity: 0;
+    /* opacity: 0; */
 }
 
 
@@ -38,16 +38,21 @@
 .mainText_Top p.mainText_Top_new{
     opacity: 0;
     transform: translate(0, 0);
-    animation: text-in-from-top 1.4s ease-in-out 3s forwards;
+    animation: text-in-from-top 1.4s ease-in-out 2s forwards;
 }
 
 .mainText_Bottom p.mainText_Bottom_hallym{
     opacity: 0;
     transform: translate(0, 0);
-    animation: text-in-from-right 1.4s ease-in-out 3s forwards;
+    animation: text-in-from-right 1.4s ease-in-out 2.5s forwards;
 }
 .mainText_Bottom .mainText_Bottom_quote{
     opacity: 0;
     transform: translate(0, 0);
-    animation: text-in-from-right 1.4s ease-in-out 5s forwards;
+    animation: text-in-from-right 1.4s ease-in-out 2.8s forwards;
+}
+
+/* fullpage에서 스크롤로 인식해서 화면 덜컥거리길래 수정 */
+.fp-is-overflow > .fp-overflow{
+    overflow-y:visible !important;
 }

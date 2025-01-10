@@ -80,7 +80,7 @@ main{
     width: 100%;
     background-image: url('../asset/background/MainSectionBottom.png');
     background-repeat: no-repeat;
-    background-size: 100vw center;
+    background-size: 100vw auto;
     background-position: top;
 }
 .mainSectionContent-2{
