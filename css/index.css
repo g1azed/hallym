@@ -18,7 +18,7 @@ body{
 section{
     width: 100vw;
     height: 100vh;
-    background-image: url("../asset/index/intro_bg.png");
+    background-image: url("../asset/intro_bg.png");
     background-repeat: no-repeat;
     background-size: 100vw 100vh;
     background-position: cover;

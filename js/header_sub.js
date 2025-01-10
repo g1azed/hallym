@@ -21,43 +21,42 @@
         if($(window).scrollTop() < 279 ){
             $("#header").removeClass("deactive");
             $("#header").addClass("active");
-
-            $('.head_logo_p').attr('src', '../asset/hanrimLOGO_color.svg')
-            $('.langIcon').attr('src', '../asset/KoreanIcon_b.svg')
-            $('.searchIcon').attr('src', '../asset/SearchIcon_b.svg')
-            $('.menuIcon').attr('src', '../asset/headerBarIcon_b.svg')
-        }else if($(window).scrollTop() > 279 && $(window).scrollTop() < 1224 ){
+            $('.head_logo_p').attr('src', '../asset/header/hanrimLOGO_color.svg')
+            $('.langIcon').attr('src', '../asset/Icon/KoreanIcon_b.svg')
+            $('.searchIcon').attr('src', '../asset/Icon/SearchIcon_b.svg')
+            $('.menuIcon').attr('src', '../asset/Icon/headerBarIcon_b.svg')
+        }else if($(window).scrollTop() > 279 && $(window).scrollTop() < 1144 ){
             $("#header").removeClass("active");
             $("#header").addClass("deactive");
 
-            $('.head_logo_p').attr('src', '../asset/hanrimLOGO.svg')
-            $('.langIcon').attr('src', '../asset/KoreanIcon.svg')
-            $('.searchIcon').attr('src', '../asset/SearchIcon.svg')
-            $('.menuIcon').attr('src', '../asset/headerBarIcon.svg')
+            $('.head_logo_p').attr('src', '../asset/header/hanrimLOGO.svg')
+            $('.langIcon').attr('src', '../asset/Icon/KoreanIcon.svg')
+            $('.searchIcon').attr('src', '../asset/Icon/SearchIcon.svg')
+            $('.menuIcon').attr('src', '../asset/Icon/headerBarIcon.svg')
         }else if($(window).scrollTop() > 1224 && $(window).scrollTop() < 2700 ){
             $("#header").removeClass("deactive");
             $("#header").addClass("active");
 
-            $('.head_logo_p').attr('src', '../asset/hanrimLOGO_color.svg')
-            $('.langIcon').attr('src', '../asset/KoreanIcon_b.svg')
-            $('.searchIcon').attr('src', '../asset/SearchIcon_b.svg')
-            $('.menuIcon').attr('src', '../asset/headerBarIcon_b.svg')
-        }else if($(window).scrollTop() > 2700 && $(window).scrollTop() < 3800 ){
+            $('.head_logo_p').attr('src', '../asset/header/hanrimLOGO_color.svg')
+            $('.langIcon').attr('src', '../asset/Icon/KoreanIcon_b.svg')
+            $('.searchIcon').attr('src', '../asset/Icon/SearchIcon_b.svg')
+            $('.menuIcon').attr('src', '../asset/Icon/headerBarIcon_b.svg')
+        }else if($(window).scrollTop() > 2700 && $(window).scrollTop() < 3617 ){
             $("#header").removeClass("active");
             $("#header").addClass("deactive");
 
-            $('.head_logo_p').attr('src', '../asset/hanrimLOGO.svg')
-            $('.langIcon').attr('src', '../asset/KoreanIcon.svg')
-            $('.searchIcon').attr('src', '../asset/SearchIcon.svg')
-            $('.menuIcon').attr('src', '../asset/headerBarIcon.svg')
+            $('.head_logo_p').attr('src', '../asset/header/hanrimLOGO.svg')
+            $('.langIcon').attr('src', '../asset/Icon/KoreanIcon.svg')
+            $('.searchIcon').attr('src', '../asset/Icon/SearchIcon.svg')
+            $('.menuIcon').attr('src', '../asset/Icon/headerBarIcon.svg')
         }else{
             $("#header").removeClass("deactive");
             $("#header").addClass("active");
 
-            $('.head_logo_p').attr('src', '../asset/hanrimLOGO_color.svg')
-            $('.langIcon').attr('src', '../asset/KoreanIcon_b.svg')
-            $('.searchIcon').attr('src', '../asset/SearchIcon_b.svg')
-            $('.menuIcon').attr('src', '../asset/headerBarIcon_b.svg')
+            $('.head_logo_p').attr('src', '../asset/header/hanrimLOGO_color.svg')
+            $('.langIcon').attr('src', '../asset/Icon/KoreanIcon_b.svg')
+            $('.searchIcon').attr('src', '../asset/Icon/SearchIcon_b.svg')
+            $('.menuIcon').attr('src', '../asset/Icon/headerBarIcon_b.svg')
         }
         console.log(scrollY)
     })
