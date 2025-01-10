@@ -3,7 +3,7 @@ const text_bottom = "대학의 미래를 열다"; // 타이핑할 문구
 let index = 0;
 let speed = 100; // 글자 타이핑 속도 (밀리초 단위)
 
-const test = `<img class="mainText_Top_quote" src="./asset/MainIndex//mainQuotes.png" />`+"새로운 한림"
+const test = `<img class="mainText_Top_quote" src="https://g1azed.github.io/hallym/asset/MainIndex//mainQuotes.png" />`+"새로운 한림"
 
 
 const mainText_Top = document.querySelector(".mainText_Top")

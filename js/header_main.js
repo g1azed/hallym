@@ -7,17 +7,17 @@ $(document).on('scroll', function(){
 
             // $('.head_logo_p').attr('src', 'asset/header/hanrimLOGO_color.svg')
             $('.head_logo_p').attr('src', 'https://g1azed.github.io/hallym/asset/header/hanrimLOGO_color.svg')
-            $('.langIcon').attr('src', '../asset/Icon/KoreanIcon_b.svg')
-            $('.searchIcon').attr('src', '../asset/Icon/SearchIcon_b.svg')
-            $('.menuIcon').attr('src', '../asset/Icon/headerBarIcon_b.svg')
+            $('.langIcon').attr('src', 'https://g1azed.github.io/hallym/asset/Icon/KoreanIcon_b.svg')
+            $('.searchIcon').attr('src', 'https://g1azed.github.io/hallym/asset/Icon/SearchIcon_b.svg')
+            $('.menuIcon').attr('src', 'https://g1azed.github.io/hallym/asset/Icon/headerBarIcon_b.svg')
         }else{
             $("#header").removeClass("active");
             $("#header").addClass("deactive");
 
             $('.head_logo_p').attr('src', 'https://g1azed.github.io/hallym/asset/header/hanrimLOGO.svg')
-            $('.langIcon').attr('src', '../asset/Icon/KoreanIcon.svg')
-            $('.searchIcon').attr('src', '../asset/Icon/SearchIcon.svg')
-            $('.menuIcon').attr('src', '../asset/Icon/headerBarIcon.svg')
+            $('.langIcon').attr('src', 'https://g1azed.github.io/hallym/asset/Icon/KoreanIcon.svg')
+            $('.searchIcon').attr('src', 'https://g1azed.github.io/hallym/asset/Icon/SearchIcon.svg')
+            $('.menuIcon').attr('src', 'https://g1azed.github.io/hallym/asset/Icon/headerBarIcon.svg')
         }
     }
 })
