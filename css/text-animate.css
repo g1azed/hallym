@@ -96,4 +96,5 @@
 .mainText_Bottom{
     clip-path: inset(0 0 0 0); 
     animation: clipping-bottom 1.8s ease-in-out 3.3s forwards; 
+    /* test */
 }
