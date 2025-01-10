@@ -90,10 +90,10 @@
     /* animation: typing 2s steps(22), blink .5s step-end infinite alternate; */
     white-space: nowrap;
     overflow: hidden;
-    /* animation: clipping-top 1.4s ease-in-out 3.3s forwards;  */
+    animation: clipping-top 1.4s ease-in-out 3.3s forwards; 
 }
 
 .mainText_Bottom{
     clip-path: inset(0 0 0 0); 
-    /* animation: clipping-bottom 1.8s ease-in-out 3.3s forwards;  */
+    animation: clipping-bottom 1.8s ease-in-out 3.3s forwards; 
 }
