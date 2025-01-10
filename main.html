@@ -15,6 +15,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fonts-archive/IBMPlexSansKR/IBMPlexSansKR.css" type="text/css"/>
 
     <!-- fullpage -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.31/fullpage.min.js" integrity="sha512-x5JY7KTULoGmcgxguKf5p4i3wfx7qXlY3OMjqez4Pj8BPoMn4krRQmwDtOwF81F+/9Be+jvhBsKOIaPPZmRelQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -24,9 +25,9 @@
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 </head>
 <body>
-    <header>
+    <header id="header">
         <div class="headerWrap">
-            <img class="head_logo p_display" src="./asset/hanrimLOGO.svg" alt="한림대학교 로고"/>
+            <img class="head_logo head_logo_p p_display" src="./asset/hanrimLOGO.svg" alt="한림대학교 로고"/>
             <img class="head_logo m_display" src="./asset/HanrimLogo_m.svg" alt="한림대학교 로고"/>
 
             <ol class="headerContentList">
@@ -40,13 +41,13 @@
             </ol>
     
             <div class="headerIconWrap">
-                <img src="./asset/KoreanIcon.svg" alt="한글 페이지 아이콘" />
+                <img class="p_display langIcon" src="./asset/KoreanIcon.svg" alt="한글 페이지 아이콘" />
                 <button>
-                    <a class="p_display" href="./search.html"> <img src="./asset/SearchIcon.svg" alt="검색" /> </a>
+                    <a class="p_display" href="./search.html"> <img class="searchIcon" src="./asset/SearchIcon.svg" alt="검색" /> </a>
                     <a class="m_display" href="./search.html"> <img src="./asset/SearchIcon_m.svg" alt="검색" /> </a>
                 </button>
                 <button>
-                    <a class="p_display" href="./menu.html">    <img class="p_display" src="./asset/headerBarIcon.svg" alt="헤더햄버거바 아이콘" /></a>
+                    <a class="p_display" href="./menu.html"> <img class="p_display menuIcon" src="./asset/headerBarIcon.svg" alt="헤더햄버거바 아이콘" /></a>
                     <a class="m_display" href="./menu.html"> <img class="m_display "src="./asset/headerBarIcon_m.svg" alt="헤더햄버거바 아이콘" /></a>
                 </button>
             
@@ -60,18 +61,22 @@
                     <div class="mainSectionContent-1">
                         <div class="mainSectionText">
                             <div class="mainText_Top">
-                                <img class="mainText_Top_quote" src="./asset/MainIndex//mainQuotes.png" />
+                                <img class="mainText_Top_quote" src="./asset/MainIndex/mainQuotes.png" />
                                 <p class="mainText_Top_all"> ALL </p> 
                                 <p class="mainText_Top_new"> NEW </p>
                             </div>
                             <div class="mainText_Bottom">
                                 <p class="mainText_Bottom_hallym"> HALLYM </p>
-                                <img class="mainText_Bottom_quote" src="./asset/MainIndex//mainQuotes.png" />
+                                <img class="mainText_Bottom_quote" src="./asset/MainIndex/mainQuotes.png" />
                             </div>
                         </div>
                         <!-- <img class="mainSectionTextImg" src="./asset/MainIndex/MainSectionText.png" alt="ALL NEW HALLYM"/> -->
                         <div class="mainSectionBtnWrap">
-                            <button> <img src="./asset/MainIndex/Button/BottomBotton.svg" /> </button>
+                            <div class="main_Down_Btn_Wrap">
+                                <button class="main_Down_Btn"> 
+                                    <img src="./asset/MainIndex/Button/bottom_circle.svg"/>
+                                </button>
+                            </div>
                             <button> <img src="./asset/MainIndex/Button/ChatBotButton.svg" /> </button>
                         </div>
                     </div>
@@ -100,8 +105,15 @@
                 <div class="mainIndexRight">
                     <img class="p_display mainIndexRightTab" src="./asset/MainIndex/stickySection/slideTab.png" />
                     <img class="m_display tab-scroll-up mainIndexRightTab" src="./asset/MainIndex/stickySection/slideTab_m.png" />
-                    <div class="mainIndexRight_imgWrap">
-                        <img class="p_display" src="./asset/MainIndex/stickySection/sticky_group.png" />
+                    
+                    <div class="p_display mainIndexRight_imgWrap">
+                        <div class="sticky_imgWrap_column">
+                            <div class="sticky_img_group">
+                                <img src="./asset/MainIndex//stickySection/Mask_group.png" />
+                                <p> </p>
+                            </div>
+                           
+                        </div>
                         <img class="m_display" src="./asset/MainIndex/stickySection/sticky_group_m.png" />
                     </div>
                     <div class="p_display mainIndexRight_btnWrap">
@@ -361,7 +373,7 @@
     <script src="./js/bottom-carousel.js"></script>
     <script src="./js/section-tab.js"></script>
     <!-- <script src="./js/text-animate.js"></script> -->
-     <!-- dfsa -->
+    <script src="./js/header_main.js"></script>
 
 </body>
 </html>

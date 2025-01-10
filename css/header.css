@@ -78,7 +78,27 @@ footer img{
     .headerIconWrap img{
         width: 6.4vw;
     }
-    .headerIconWrap img:nth-child(1){
-        margin-right: 3.2vw;
-    }
+}
+
+
+.active{
+    background-color: white;
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+    
+    -webkit-transition-duration:0.4s;
+    -webkit-transition-timing-function:ease;
+}
+.active .headerContentList li{
+    color: #121212;
+}
+
+.deactive{
+
+    background-color: transparent;
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+
+    -webkit-transition-duration:0.4s;
+    -webkit-transition-timing-function:ease;
 }

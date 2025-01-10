@@ -18,9 +18,10 @@
 	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
-    <header>
+	<header id="header">
         <div class="headerWrap">
-            <img src="./asset/hanrimLOGO_color.svg" alt="한림대학교 로고"/>
+            <img class="head_logo head_logo_p p_display" src="./asset/hanrimLOGO.svg" alt="한림대학교 로고"/>
+            <img class="head_logo m_display" src="./asset/HanrimLogo_m.svg" alt="한림대학교 로고"/>
 
             <ol class="headerContentList">
                 <li> 대학소개 </li>
@@ -33,11 +34,16 @@
             </ol>
     
             <div class="headerIconWrap">
-                <img src="./asset/KoreanIcon.svg" alt="한글 페이지 아이콘" />
+                <img class="langIcon" src="./asset/KoreanIcon.svg" alt="한글 페이지 아이콘" />
                 <button>
-                    <a href="./search.html"> <img src="./asset/SearchIcon.svg" alt="검색" /> </a>
+                    <a class="p_display" href="./search.html"> <img class="searchIcon" src="./asset/SearchIcon.svg" alt="검색" /> </a>
+                    <a class="m_display" href="./search.html"> <img src="./asset/SearchIcon_m.svg" alt="검색" /> </a>
                 </button>
-                <img src="./asset/headerBarIcon.svg" alt="헤더햄버거바 아이콘" />
+                <button>
+                    <a class="p_display" href="./menu.html"> <img class="p_display menuIcon" src="./asset/headerBarIcon.svg" alt="헤더햄버거바 아이콘" /></a>
+                    <a class="m_display" href="./menu.html"> <img class="m_display "src="./asset/headerBarIcon_m.svg" alt="헤더햄버거바 아이콘" /></a>
+                </button>
+            
             </div>
         </div>
     </header>
@@ -92,7 +98,7 @@
                 </p>
             </div>
         </section>
-        <section class="vision_section vision_section_3">\asdf
+        <section class="vision_section vision_section_3">
             <!-- <img src="./asset/vision/vision_contentimg.png" /> -->
         </section>
 
@@ -155,5 +161,6 @@
 		},
 		})
 	</script>
+	<script src="./js/header_sub.js"></script>
 </body>
 </html>

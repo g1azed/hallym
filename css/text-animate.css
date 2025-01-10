@@ -1,7 +1,7 @@
 
 /* 텍스트 opcity 0 */
 .headerWrap, .mainSectionBtnWrap{
-    opacity: 0;
+    /* opacity: 0; */
 }
 
 
@@ -23,7 +23,7 @@
 }
 
 /* animation: name duration timing-function delay iteration-count direction fill-mode;/ */
-.mainText_Top p.mainText_Top_all{
+/* .mainText_Top p.mainText_Top_all{
     transform: translate(0, 0);
     opacity: 0;
     animation: text-in-from-left 1s ease-in-out 1s forwards;
@@ -50,7 +50,7 @@
     opacity: 0;
     transform: translate(0, 0);
     animation: text-in-from-right 1.4s ease-in-out 2.8s forwards;
-}
+} */
 
 /* fullpage에서 스크롤로 인식해서 화면 덜컥거리길래 수정 */
 .fp-is-overflow > .fp-overflow{
@@ -60,7 +60,7 @@
 
 /* 2. 텍스트 클리핑으로 사라지기 */
 
-@keyframes clipping-top{
+/* @keyframes clipping-top{
     0%{clip-path: inset(0 0 0 0);  }
     100%{ clip-path: inset(0 100% 0 0); }
 }
@@ -68,7 +68,7 @@
 @keyframes clipping-bottom{
     0%{clip-path: inset(0 0 0 0);  }
     100%{ clip-path: inset(0 0 0 100%); }
-}
+} */
 
 
 
@@ -96,5 +96,4 @@
 .mainText_Bottom{
     clip-path: inset(0 0 0 0); 
     animation: clipping-bottom 1.8s ease-in-out 5.3s forwards; 
-    /* tesfdasdfdst */
 }

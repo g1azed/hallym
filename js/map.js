@@ -26,6 +26,8 @@ selectIcon.addEventListener("mouseleave", () => {
 
 // popup active
 const asideBtn = document.getElementsByClassName("aside_btn");
+const iconClick = document.querySelector(".map_hover_wrap");
+
 const popupBox = document.querySelector(".popup_wrap");
 
 const asideBtnLength = asideBtn.length;
@@ -37,6 +39,12 @@ window.onload = function () {
         asideBtn[i].style.color = "#121212";           // 기본 텍스트 색
     }
 };
+
+iconClick.addEventListener("click", () => {
+    popupBox.classList.toggle('none');
+})
+
+
 
 for (let i = 0; i < asideBtnLength; i++) {
     asideBtn[i].addEventListener("click", function () {
