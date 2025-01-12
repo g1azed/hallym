@@ -18,7 +18,7 @@ $(document).ready(function () {
                 $('.langIcon').attr('src', 'https://g1azed.github.io/hallym/asset/Icon/KoreanIcon_b.svg')
                 $('.searchIcon').attr('src', 'https://g1azed.github.io/hallym/asset/Icon/SearchIcon_b.svg')
                 $('.menuIcon').attr('src', 'https://g1azed.github.io/hallym/asset/Icon/headerBarIcon_b.svg')
-            }else if($(window).scrollTop() <= 3780 && $(window).scrollTop() > -10){
+            }else if($(window).scrollTop() <= 2424 && $(window).scrollTop() > -10){
                 $("#header").css('opacity','0')
             }else{
                 $("#header").css('opacity','1')
