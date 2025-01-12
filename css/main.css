@@ -199,7 +199,10 @@ main{
     transition: all 2.3s ease-in-out;
 }
 
-
+.vertical-section{
+    min-height: 1080px;
+    height: 100vh;
+}
 .vertical_Text{
     display: flex;
     flex-direction: column;
@@ -208,10 +211,7 @@ main{
     gap: 2.08vw;
     padding: 19.58vw 19vw 0 19vw;
 }
-.vertical-section{
-    min-height: 1080px;
-    height: 100vh;
-}
+
 .vertical-section h1{
     bottom: 0;
     font-family: IBM Plex Sans KR;
