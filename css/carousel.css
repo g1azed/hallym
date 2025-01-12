@@ -132,6 +132,7 @@
     transform: translateX(-200px);
 }
 .carouselBottom_Cell{
+    width: 55.72vw;
     display: flex;
     flex-direction: row;
     flex: 1;
@@ -149,7 +150,7 @@
 }
 
 .Bottom_CellText{
-    width: 33.33vw;
+    /* width: 33.33vw; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -164,6 +165,7 @@
 }
 .Bottom_CellText p{
     font-family: "Pretendard Variable";
+    width: 21.875vw;
     font-weight: 500;
     font-size: 1.04vw;
     line-height: 1.25vw;

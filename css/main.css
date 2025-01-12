@@ -40,7 +40,6 @@ main{
     transform-origin: center;
 }
 .horizon_list{
-    background-size: 100%;
     transform: translateX(20px);
     transition: all 0.6s ease-out, transform 0.6s ease-out ;
     overflow: hidden;
@@ -49,7 +48,8 @@ main{
 }
 .horizon_list:nth-child(1){
     background-image: url('../asset/background/page_2.png');
-
+    background-position: bottom;
+    background-size: 100vw;
 }
 .horizon_list.active{
     transform: translateY(0);
@@ -67,7 +67,8 @@ main{
 }
 .horizon_list:nth-child(2){
     background-image: url('../asset/background/page_3.png');
-    background-position: top;
+    background-size: 100%;
+    background-position: 100vw 100%;
 }
 .horizon_list:nth-child(2) h1{
     font-family: IBM Plex Sans KR;
@@ -80,15 +81,6 @@ main{
     text-decoration-skip-ink: none;
 
 }
-
-
-/* if (scrollTop >160) {
-    $Text_allnew.css('transform', 'translateY(0)');
-    $Text_allnew.css('clip-path', '  inset(-100% 0% -100% 0%)');
-} else if(scrollTop <= 160 && scrollTop == 0){
-    $Text_allnew.css('transform', 'translateY(-100px)');
-    $Text_allnew.css('clip-path', ' inset(50% 0% 50% 0%)');
-} */
 
 @keyframes allnewText {
     0%{ transform: translateY(-100px); clip-path : inset(0% 0% 100% 0%) }
@@ -175,7 +167,7 @@ main{
     height: 100vh;
     background-image: url('../asset/background/page_4.png');
     background-size: 100%;
-    background-position: top;
+    background-position: 98.5vw 0%;
 }
 .vertical-section h1{
     bottom: 0;
@@ -387,7 +379,7 @@ main{
 
 
 .sticky_img_group p {
-    font-family: Pretendard;
+    /* font-family: Pretendard; */
     font-size: 1.25vw;
     font-weight: 700;
     line-height: 1.66vw;
