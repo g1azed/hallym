@@ -3,6 +3,7 @@ $(document).ready(function () {
 
     const $Text_allnew = $(".allnew");
     const $Text_hallym = $(".hallym");
+    const $Indicator = $(".indicator-bar");
     
     $(window).on('scroll', function () {
         // 스크롤 위치 가져오기
@@ -25,32 +26,14 @@ $(document).ready(function () {
             $Text_hallym.css('clip-path', ' inset(-100% 100% -100% 0%)');
         }
 
+        if(scrollTop >= 2930){
+            $Indicator.css("visibility", 'hidden')
+        }else{
+            $Indicator.css("visibility", 'visible')
+        }
 
 
 
-        // 투명도 변경: 0 ~ 1 사이 값을 계산하여 투명도 적용
-        // const opacity = 1 - scrollTop / 800;
-        // $box.css('opacity', Math.max(opacity, 0.3)); // 최소 투명도 0.3 유지
     });
 });
 
-
-// $(document).ready(function () {
-//     const $box = $('.box');
-
-//     $(window).on('scroll', function () {
-//         // 스크롤 위치 가져오기
-//         const scrollTop = $(this).scrollTop();
-
-//         // 배경색 변경: 스크롤 위치에 따라 색상이 점진적으로 변함
-//         if (scrollTop > 200) {
-//             $box.css('transform', 'translateX(-20px)');
-//         } else {
-//             $box.css('transform', 'translateX(0px)');
-//         }
-
-//         // 투명도 변경: 0 ~ 1 사이 값을 계산하여 투명도 적용
-//         const opacity = 1 - scrollTop / 800;
-//         $box.css('opacity', Math.max(opacity, 0.3)); // 최소 투명도 0.3 유지
-//     });
-// });

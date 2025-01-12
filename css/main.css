@@ -163,21 +163,22 @@ main{
     transform: translateX(0);
 }
 
-.vertical-section{
-    height: 100vh;
-    background-image: url('../asset/background/page_4.png');
-    background-size: 100%;
-    background-position: top;
-
+.vertical_Text{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 2.08vw;
-
-    padding: 15.6vw 19vw;
+    padding: 15.6vw 19vw 0 19vw;
+}
+.vertical-section{
+    height: 100vh;
+    background-image: url('../asset/background/page_4.png');
+    background-size: 100%;
+    background-position: top;
 }
 .vertical-section h1{
+    bottom: 0;
     font-family: IBM Plex Sans KR;
     font-size: 4.16vw;
     font-weight: 700;
@@ -195,7 +196,59 @@ main{
     color: #fff;
     
 }
+.vertical_Btn{
+    padding: 4.16vw;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    gap: 33.95vw;
+}
+.main_Down_Btn_Wrap{
+    width: 4.15vw;
+    height: auto ;
 
+}
+.main_Down_Btn{
+    background-image: url('../asset/MainIndex/Button/bottom_arrow.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;;
+}
+
+@keyframes infinite-rotate {
+    0%{ transform: rotate(0deg); }
+    100%{ transform: rotate(360deg); }
+}
+.main_Down_Btn img{
+    width: 4.15vw;
+    height: auto ;
+    animation : infinite-rotate 10s infinite linear;
+}
+
+/* 인디케이터 */
+.indicator-bar {
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 1px;
+    background-color: #6e6e6e;
+    /* opacity: 0.2; */
+    border-radius: 1px;
+    overflow: hidden;
+}
+
+.indicator-progress {
+    height: 100%;
+    background-color: #fff;
+    opacity: 1;
+    width: 0%;
+    transition: width 0.1s ease;
+}
+
+/*  */
 
 .horizon_container{
     overflow-x: hidden;
@@ -208,7 +261,7 @@ main{
     min-height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
     font-size: 4ch;
 }
 .mainSection-2{

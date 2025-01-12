@@ -1,16 +1,20 @@
 // 스크롤 시 header fade-in
 $(document).on('scroll', function(){
     if($(window).width() >768){
-        if($(window).scrollTop() >= 1738){
+        if($(window).scrollTop() >= 4818){
             $("#header").removeClass("deactive");
             $("#header").addClass("active");
 
+            $("#header").css('opacity','1')
             // $('.head_logo_p').attr('src', 'asset/header/hanrimLOGO_color.svg')
             $('.head_logo_p').attr('src', 'https://g1azed.github.io/hallym/asset/header/hanrimLOGO_color.svg')
             $('.langIcon').attr('src', 'https://g1azed.github.io/hallym/asset/Icon/KoreanIcon_b.svg')
             $('.searchIcon').attr('src', 'https://g1azed.github.io/hallym/asset/Icon/SearchIcon_b.svg')
             $('.menuIcon').attr('src', 'https://g1azed.github.io/hallym/asset/Icon/headerBarIcon_b.svg')
+        }else if($(window).scrollTop() <= 3780 && $(window).scrollTop() >= 0){
+            $("#header").css('opacity','0')
         }else{
+            $("#header").css('opacity','1')
             $("#header").removeClass("active");
             $("#header").addClass("deactive");
 
@@ -21,3 +25,5 @@ $(document).on('scroll', function(){
         }
     }
 })
+
+$Text_hallym.css('transform', 'translateX(0)');
