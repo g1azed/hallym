@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>한림대학교 메인</title>
+
     <link rel="stylesheet" href="./reset.css">
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/header.css">
@@ -16,10 +17,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fonts-archive/IBMPlexSansKR/IBMPlexSansKR.css" type="text/css"/>
-
-    <!-- fullpage -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.31/fullpage.min.js" integrity="sha512-x5JY7KTULoGmcgxguKf5p4i3wfx7qXlY3OMjqez4Pj8BPoMn4krRQmwDtOwF81F+/9Be+jvhBsKOIaPPZmRelQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.31/fullpage.css" integrity="sha512-grbNqap+/rctn1fIPhhz+5y9PwsQOVoWRuTdwe7mE2nh/ypC2Mclow4EIjVExz8A3IT5gmweWz37Zn2Rofpc3w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- aos -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">   
     
     <!-- slick -->
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
@@ -56,45 +56,50 @@
     </header>
     <main>
         <div class="mainIndex-1">
-            <div id="fullpage">
-                <div class="section mainSection-1">
-                    <div class="mainSectionContent-1">
-                        <div class="mainSectionText">
-                            <div class="mainText_Top">
-                                <img class="mainText_Top_quote" src="./asset/MainIndex/mainQuotes.png" />
-                                <p class="mainText_Top_all"> ALL </p> 
-                                <p class="mainText_Top_new"> NEW </p>
-                            </div>
-                            <div class="mainText_Bottom">
-                                <p class="mainText_Bottom_hallym"> HALLYM </p>
-                                <img class="mainText_Bottom_quote" src="./asset/MainIndex/mainQuotes.png" />
-                            </div>
+            <div class="mainSection">
+                <div class="sticky-container">
+                    <div class="horizon_container">
+                        <div class="horizon_list">
+                            <h1 class="allnew">A</h1>
+                            <h1 class="allnew">L</h1>
+                            <h1 class="allnew">L</h1>
+                            <h1 class="allnew">N</h1>
+                            <h1 class="allnew">E</h1>
+                            <h1 class="allnew">W</h1>
                         </div>
-                        <!-- <img class="mainSectionTextImg" src="./asset/MainIndex/MainSectionText.png" alt="ALL NEW HALLYM"/> -->
-                        <div class="mainSectionBtnWrap">
-                            <div class="main_Down_Btn_Wrap">
-                                <button class="main_Down_Btn"> 
-                                    <img src="./asset/MainIndex/Button/bottom_circle.svg"/>
-                                </button>
-                            </div>
-                            <button> <img src="./asset/MainIndex/Button/ChatBotButton.svg" /> </button>
+                        <div  class="horizon_list">
+                            <!-- <h1 class="hallym">H</h1>
+                            <h1 class="hallym">A</h1>
+                            <h1 class="hallym">L</h1>
+                            <h1 class="hallym">L</h1>
+                            <h1 class="hallym">Y</h1>
+                            <h1 class="hallym">M</h1> -->
+                            <h1 class="hallym"> 새로운 한림, 대학의 미래를 열다 </h1>
                         </div>
                     </div>
+                    <div class="indicator-bar"></div>
                 </div>
-                
-                <div class="section mainSection-2">
-                    <div class="mainSectionContent-2">
-                        <h2> Hallym Mission </h2>
-                        <p> 한림대학은 1982년 건학 이래 '풍부한 인간성과 창조적 지성을 지닌 인재를 양성하고, 
-                            학술 및 문화의 진흥을 도모'함으로써 '개인의 성장, 사회의 발전, 국가의 번영, 
-                            인류의 행복에 기여함'을 실현하기 위해 매진해 왔습니다.</p>
-                        <button> <img src="./asset/MainIndex/hallymMissionBtn.png" /></button>
-                    </div> 
+                <div class="vertical-section">
+                    <div class="vertical_Text">
+                        <h1 data-aos="fade-up" data-aos-duration="600" data-aos-delay="80" > Hallym Mission </h1>
+                        <p data-aos="fade-up" data-aos-duration="600" data-aos-delay="80">
+                            한림대학은 1982년 건학 이래 '풍부한 인간성과 창조적 지성을 지닌 인재를 양성하고,
+                            학술 및 문화의 진흥을 도모'함으로써 '개인의 성장, 사회의 발전, 국가의 번영,
+                            인류의 행복에 기여함'을 실현하기 위해 매진해 왔습니다.
+                        </p>
+                        <img data-aos="fade-up" data-aos-duration="600" data-aos-delay="60" src="./asset/MainIndex/hallymMissionBtn.png" />
+                    </div>
+                    <div class="vertical_Btn">
+                        <div   data-aos="fade-up" data-aos-duration="600" data-aos-delay="80" class="main_Down_Btn_Wrap">
+                            <button class="main_Down_Btn"> 
+                                <img src="./asset/MainIndex/Button/bottom_circle.svg"/>
+                            </button>
+                        </div>
+                        <button  data-aos="fade-up" data-aos-duration="600" data-aos-delay="80"> <img src="./asset/MainIndex/Button/ChatBotButton.svg" /> </button>
+                    </div>
+                   
                 </div>
-                
-
             </div>
-    
         </div>
 
         <div class="mainIndex-2 ">
@@ -114,7 +119,6 @@
                                     <div class="sticky_img_wrap">
                                         <img class="img_hover" src="./asset/MainIndex/stickySection/Mask_group.png" />
                                     </div>
-                    
                                     <p> 일송기념도서관 </p>
                                 </div>
                                 <div class="sticky_img_group">
@@ -369,47 +373,25 @@
     </footer>
 
     <!-- <script src="./js/main-slide.js"></script> -->
+     
     <script
     src="https://code.jquery.com/jquery-3.7.1.min.js"
     integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
     crossorigin="anonymous"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
+        AOS.init();
+      </script>
 
-
-        new fullpage('#fullpage', {
-            scrollBar: true,
-            navigation: false,
-            responsiveWidth: 769,  // 900px 이하의 넓이 화면에서는 autoScrolling 비활성화
-            responsiveSlides: true,
-            fitToSection: false, // 작은 화면에서 fitToSection 비활성화
-            // parallax: true // 작은 화면에서의 부드러운 스크롤링
-            // onLeave: function (origin, destination, direction) {
-            //     const content1 = document.querySelector('.mainSectionContent-1');
-            //     const content2 = document.querySelector('.mainSectionContent-2');
-            //     const mainBg2 = document.querySelector('.mainSection-2_Bg');
-
-            //     if (destination.index === 2) { // mainSection-3로 이동할 때
-            //         content1.classList.add('hidden'); // mainSectionContent-1 fadeOut
-            //         content2.classList.add('visible'); // mainSectionContent-2 fadeIn
-            //     } else if (origin.index === 2 && destination.index === 1) { // mainSection-2로 돌아갈 때
-            //         content1.classList.remove('hidden'); // mainSectionContent-1 다시 보이기
-            //         content2.classList.remove('visible'); // mainSectionContent-2 숨김
-            //     }else if(origin.index > 2){
-            //         content2.classList.add('hidden');  
-            //     }
-            // }
-        });
-
-        
-    </script>
     <script src="./js/top-carousel.js"></script>
     <script src="./js/bottom-carousel.js"></script>
     <script src="./js/section-tab.js"></script>
     <script src="./js/more-view.js"></script>
-    <!-- <script src="./js/text-animate.js"></script> -->
     <script src="./js/header_main.js"></script>
+    <script src="./js/horizon-scroll.js"></script>
+    <script src="./js/horizon-text.js"></script>
 
 </body>
 </html>

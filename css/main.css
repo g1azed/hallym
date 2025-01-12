@@ -1,5 +1,5 @@
 
-
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR&family=Noto+Sans+KR:wght@100..900&family=Viga&display=swap');
 /* .noto-sans-<uniquifier> {
   font-family: "Noto Sans", serif;
   font-optical-sizing: auto;
@@ -27,133 +27,179 @@ main{
     /* overflow-x: hidden; */
     /* sticky 적용하려면 오버플로우 없어야함 */
 }
-
-.mainSection{
-    background-color: #121212;
+.mainIndex-1{
+    background-color: #000;
+    
+}
+.mainIndex-w{
+    background-color: #fff;
+    z-index:3;
 }
 @keyframes scale-up {
     0%{    transform: scale(0.3);}
     100%{     transform: scale(1); }
 }
 
+.bg_video{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+
+    transform: scale(0.3);
+    animation: scale-up 1s 1 1.5s ease-in-out forwards;
+    filter:brightness(40%)
+}
+.bg_video video{
+    position: absolute;
+    width: 100%;
+}
+
 .sticky-container{
     transform-origin: center;
 }
 .horizon_list{
-    transform: translateX(20px);
+    /* transform: translateX(20px); */
     transition: all 0.6s ease-out, transform 0.6s ease-out ;
     overflow: hidden;
-    transform: scale(0.3);
-    animation: scale-up 3s 1 3s ease-in-out forwards;
+
 }
-.horizon_list:nth-child(1){
-    background-image: url('../asset/background/page_2.png');
-    background-position: bottom;
-    background-size: 100vw;
-}
+
 .horizon_list.active{
     transform: translateY(0);
 }
-.horizon_list h1{
-    font-family: IBM Plex Sans KR;
-    font-size: 22.9vw;
+.horizon_list:nth-child(1) h1{
+    font-family: "Viga", serif;
+    font-size: 12.91vw;
     font-weight: 400;
-    line-height: 34.3vw;
+    line-height: 17.23vw;
     letter-spacing: -0.02em;
     text-align: left;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
     color: #fff;
 }
-.horizon_list:nth-child(2){
-    background-image: url('../asset/background/page_3.png');
-    background-size: 100%;
-    background-position: 100vw 100%;
-}
+
 .horizon_list:nth-child(2) h1{
     font-family: IBM Plex Sans KR;
-    font-size: 440px;
+    font-size: 11.45vw;
     font-weight: 700;
-    line-height: 660px;
+    line-height: 17.18vw;
     letter-spacing: -0.02em;
     text-align: left;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
+    color: #fff;
 
 }
 
 @keyframes allnewText {
-    0%{ transform: translateY(-100px); clip-path : inset(0% 0% 100% 0%) }
-    100%{  transform: translateY(0);  clip-path : inset(0% 0% 0% 0%)  }
+    0%{ transform: translateY(-100px); clip-path : inset(0% 0% 100% 0%); opacity: 0;}
+    50%{ opacity : 0;}
+    100%{  transform: translateY(0);  clip-path : inset(0% 0% 0% 0%); opacity: 1;  }
 }
 
 .allnew{
-    transition: 0.8s ease-in-out;
-    animation : allnewText 1.3s 1 6s forwards;
-    clip-path : inset(0% 0% -100% 0%) 
+    opacity: 0;
 }
 
-
+/* all new hallym */
 .allnew:nth-child(1){
-    animation : allnewText 1.3s 1 6s forwards;
-    clip-path: inset(0% 100% -100% 0%); 
+    transition: all 2.1s ease-in-out;
+    transform: translateX(0);
+    animation : allnewText 1.3s 1 2s forwards;
 }
-
 .allnew:nth-child(2){
-    animation : allnewText 1.3s 1 6.2s forwards;
-    clip-path: inset(0% 100% -100% 0%); 
+    transition: all 2.1s ease-in-out;
+    transform: translateX(0);
+    animation : allnewText 1.3s 1 2.1s forwards;
 }
-
 .allnew:nth-child(3){
-    animation : allnewText 1.3s 1 6.4s forwards;
-    clip-path: inset(0% 100% -100% 0%); 
-}
-
-.allnew:nth-child(4){
-    animation : allnewText 1.3s 1 6.6s forwards;
-    clip-path: inset(0% 100% -100% 0%); 
+    transition: all 2.1s ease-in-out;
+    transform: translateX(0);
+    animation : allnewText 1.3s 1 2.15s forwards;
 }
 
 .allnew:nth-child(5){
-    animation : allnewText 1.3s 1 6.8s forwards;
-    clip-path: inset(0% 100% -100% 0%); 
-}
-
-.allnew:nth-child(6){
-    animation : allnewText 1.3s 1 7s forwards;
-    clip-path: inset(0% 100% -100% 0%); 
-}
-
-.hallym:nth-child(1){
-    clip-path: inset(-100% 100% -100% 0%); 
-    transition: 1.3s ease-in-out;
-    transform: translateX(0);
-}
-.hallym:nth-child(2){
-    clip-path: inset(-100% 100% -100% 0%); 
-    transition: all 1.5s ease-in-out;
-    transform: translateX(0);
-}
-.hallym:nth-child(3){
-    clip-path: inset(-100% 100% -100% 0%); 
-    transition: all 1.7s ease-in-out;
-    transform: translateX(0);
-}
-.hallym:nth-child(4){
-    clip-path: inset(-100% 100% -100% 0%); 
-    transition: all 1.9s ease-in-out;
-    transform: translateX(0);
-}
-.hallym:nth-child(5){
-    clip-path: inset(-100% 100% -100% 0%); 
     transition: all 2.1s ease-in-out;
     transform: translateX(0);
+    animation : allnewText 1.3s 1 2.2s forwards;
+}
+.allnew:nth-child(6){
+    transition: all 2.1s ease-in-out;
+    transform: translateX(0);
+    animation : allnewText 1.3s 1 2.24s forwards;
+}
+.allnew:nth-child(7){
+    transition: all 2.1s ease-in-out;
+    transform: translateX(0);
+    animation : allnewText 1.3s 1 2.25s forwards;
+}
+
+.allnew:nth-child(9){
+    transition: all 2.1s ease-in-out;
+    transform: translateX(0);
+    animation : allnewText 1.3s 1 2.3s forwards;
+}
+.allnew:nth-child(10){
+    transition: all 2.1s ease-in-out;
+    transform: translateX(0);
+    animation : allnewText 1.3s 1 2.32s forwards;
+}
+.allnew:nth-child(11){
+    transition: all 2.1s ease-in-out;
+    transform: translateX(0);
+    animation : allnewText 1.3s 1 2.33s forwards;
+}
+.allnew:nth-child(12){
+    transition: all 2.1s ease-in-out;
+    transform: translateX(0);
+    animation : allnewText 1.3s 1 2.35s forwards;
+}
+.allnew:nth-child(13){
+    transition: all 2.1s ease-in-out;
+    transform: translateX(0);
+    animation : allnewText 1.3s 1 2.4s forwards;
+}
+.allnew:nth-child(14){
+    transition: all 2.1s ease-in-out;
+    transform: translateX(0);
+    animation : allnewText 1.3s 1 2.45s forwards;
+}
+
+/* 대학의 미래를 열다 */
+.hallym{
+    transform: translateX(0);
+    transform: translateY(0);
+}
+.hallym:nth-child(1){
+    transition: 1.3s ease-in-out;
+}
+.hallym:nth-child(2){
+    transition: all 1.5s ease-in-out;
+}
+.hallym:nth-child(3){
+    transition: all 1.7s ease-in-out;
+}
+.hallym:nth-child(4){
+    transition: all 1.9s ease-in-out;
+}
+.hallym:nth-child(5){
+    transition: all 2.1s ease-in-out;
 }
 .hallym:nth-child(6){
-    clip-path: inset(-100% 100% -100% 0%); 
     transition: all 2.3s ease-in-out;
-    transform: translateX(0);
 }
+.hallym:nth-child(7){
+    transition: all 2.3s ease-in-out;
+}
+.hallym:nth-child(8){
+    transition: all 2.3s ease-in-out;
+}
+.hallym:nth-child(9){
+    transition: all 2.3s ease-in-out;
+}
+.hallym:nth-child(10){
+    transition: all 2.3s ease-in-out;
+}
+
 
 .vertical_Text{
     display: flex;
@@ -163,12 +209,7 @@ main{
     gap: 2.08vw;
     padding: 15.6vw 19vw 0 19vw;
 }
-.vertical-section{
-    height: 100vh;
-    background-image: url('../asset/background/page_4.png');
-    background-size: 100%;
-    background-position: 98.5vw 0%;
-}
+
 .vertical-section h1{
     bottom: 0;
     font-family: IBM Plex Sans KR;
@@ -254,7 +295,6 @@ main{
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    font-size: 4ch;
 }
 .mainSection-2{
     width: 100%;
