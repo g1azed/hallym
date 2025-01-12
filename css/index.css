@@ -55,6 +55,7 @@ span.sec_title{
     line-height: 24px;
     text-align: left;
     font-family: "Noto Sans KR", serif;
+    white-space: nowrap;
 }
 
 .img_section{

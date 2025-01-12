@@ -29,12 +29,11 @@ $(document).ready(function () {
 
         if (scrollTop > 833) {
             $Text_hallym.css('transform', 'translateX(0)');
-            $Text_hallym.css('clip-path', 'inset(-100% 0% -100% 0%)');
-        } else if (scrollTop <= 833 && scrollTop == 0) {
-            $Text_hallym[0].offsetHeight; // 강제 리렌더링
-            $Text_hallym.css('transform', 'translateX(200px) translateY(0px)');
-            $Text_hallym.css('clip-path', 'inset(-100% 100% -100% 0%)');
-        } 
+            $Text_hallym.css('clip-path', '  inset(-100% 0% -100% 0%)');
+        } else if(scrollTop <= 833 && scrollTop == 0){
+            $Text_hallym.css('transform', 'translateX(200px)');
+            $Text_hallym.css('clip-path', ' inset(-100% 100% -100% 0%)');
+        }
 
         // 인디케이터
         if(scrollTop >= 2930){
