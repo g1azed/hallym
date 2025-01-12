@@ -1,33 +1,46 @@
-/* .ibm-plex-sans-kr-regular {
-    font-family: "IBM Plex Sans KR", serif;
-    font-weight: 400;
-    font-style: normal;
-  } */
-  .m_display{
+
+
+/* .noto-sans-<uniquifier> {
+  font-family: "Noto Sans", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+} */
+.m_display{
     display: none;
 }
+.img_hover{
+    transition-duration: 0.5s;
+}
+.img_hover:hover{
+    transform: scale(1.2, 1.2); transition-duration: 0.5s;
+}
 
+
+/* -----------------------------------------------------------  */
 main{
     width: 100%;
     font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
     transition: transform 0.8s ease-in-out;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
+    /* sticky 적용하려면 오버플로우 없어야함 */
 }
-
 
 .section {
     width: 100vw;
     height: 100vh;
 }
-.mainIndex-1{
-    background-position: top;
-}
+
 .mainSection-1{
     width: 100%;
-    background-image: url('../asset/background/MainSectionTop.png');
+    height: 200vh;
+    background-attachment: fixed;
+    background-image: url('../asset/background/MainSectionFull.png');
     background-repeat: no-repeat;
     background-size: 100vw auto;
-    background-position: bottom;
+    background-position: top;
 }
 
 .mainSectionContent-1{
@@ -51,21 +64,17 @@ main{
 
 .mainSectionText p{
     display: inline-block;
-    font-family: IBM Plex Sans KR;
+    font-family: 'IBM Plex Sans KR';
     font-size: 7.29vw;
-    font-weight: 900;
+    font-weight: 700;
     line-height: 8.93vw;
     letter-spacing: 0.02em;
     color: #fff;
     margin-right: 1.04vw;
 }
-
-/* .mainSectionTextImg{
-    object-fit: contain;
-    width: 50vw;
-    margin: 0 auto;
-} */
-
+.mainText_Bottom_quote{
+    transform: rotate(180deg) translateY(3.625rem);
+}
 .mainSectionBtnWrap{
     background-image: none;
     width: 100%;
@@ -74,7 +83,24 @@ main{
     align-items: center;
     padding: 6.56vw 4.16vw 4.16vw 6.25vw;
 }
+.main_Down_Btn_Wrap{
+    width: 100%;
+    height: auto ;
+}
+.main_Down_Btn{
+    background-image: url('../asset/MainIndex/Button/bottom_arrow.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;;
+}
 
+@keyframes infinite-rotate {
+    0%{ transform: rotate(0deg); }
+    100%{ transform: rotate(360deg); }
+}
+.main_Down_Btn img{
+    animation : infinite-rotate 10s infinite linear;
+}
 
 .mainSection-2{
     width: 100%;
@@ -89,7 +115,7 @@ main{
     justify-content: center;
     align-items: center;
     gap: 2.08vw;
-    padding: 303px;
+    padding: 15.78vw;
 
 }
 
@@ -139,6 +165,7 @@ main{
 }
 
 .mainIndex-2 .mainIndexRight{
+    min-height: 100vh;
     height: auto;
 }
 .mainIndexRight_btnWrap {
@@ -165,17 +192,63 @@ main{
     background: #fff;
     position: sticky;
     top: 0;
+    z-index: 2;
     /* margin-bottom: 13.2vw; */
+}
+.mainIndexRight_imgWrapper{
+
+    height: calc(600px+ auto); 
+    display: flex;
+    flex-direction: column;
+
 }
 .mainIndex-2 .mainIndexRight_imgWrap{
     padding: 2px;
     /* overflow: hidden;*/
     height: calc(600px+ auto); 
-    /* display: flex; */
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 2.08vw;
+
 }
-.mainIndex-2 .mainIndexRight_imgWrap img{
-    width: 45vw;
-    
+.sticky_imgWrap_column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2.91vw; 
+}
+.sticky_imgWrap_column_2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.25vw; 
+}
+
+
+.sticky_img_group p {
+    font-family: Pretendard;
+    font-size: 1.25vw;
+    font-weight: 700;
+    line-height: 1.66vw;
+    text-align: left;
+
+}
+
+.sticky_img_wrap{
+    width: 21.8vw;
+    height: 21.8vw;
+    overflow: hidden;
+}
+.sticky_img_group{
+    display: flex;
+    flex-direction: column;
+    gap: 0.83vw;
+}
+.sticky_img_group img{
+    width: 21.8vw;
 }
 
 .mainIndex_BgText{
@@ -260,10 +333,13 @@ main{
     object-fit:cover;  
 }
 .mainIndex_VideoWrapper img{
-    width: 26vw;
+    display: block;
+    width: auto;
+    height: 25vw;
+    object-fit: contain;
     position: absolute;
-    top: 20vw;
-    right: 2.08vw;
+    bottom: 3.125vw;
+    right: 2vw;
     z-index: 3;
 }
 
@@ -284,6 +360,7 @@ main{
     width: 15.9vw;
     position: sticky;
     top: 7.8vw;
+    padding-bottom: 300px;
 }
 
 .snsFlex_ColumnWrap{
@@ -298,6 +375,12 @@ main{
     gap: 2.8vw;
 
 }
+.snsFlex_RowWrap .gridItem{
+    width:20.41vw;
+    height: 27vw;
+    overflow: hidden;
+}
+
 .snsFlex_RowWrap img{
     width:20.41vw;
 }
@@ -312,6 +395,9 @@ main{
 
 /* mobile */
 @media (max-width: 768px){
+    body{
+        max-width: 768px;
+    }
     .m_display{
         display: block;
     }
@@ -321,30 +407,23 @@ main{
     .mainIndex-1{
         width: 100vw;
         height: 100vh;
-        background-image: url('../asset/background/MainSectionFull.png');
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: right;
     }
     .mainSection-1, .mainSection-2{
         overflow: hidden;
         width: 100%;
-        background-image: none;
-    }
-    .mainSection-1{
+        background-size: cover;
         justify-content: flex-end !important;
-        background-size: 100vw auto;
-        background-position: bottom;
+        background-position: 100% 0%;
     }
-    /* .mainSectionTextImg{
-        width: 85.33vw;
-    } */
     div.mainSectionBtnWrap{
         justify-content: flex-end;
         padding: 14.4vw 5.3vw;
         background-image: url('../asset/scrolldown_m.svg');
         background-repeat: no-repeat;
         background-position: 50% 90%;
+    }
+    .mainText_Top{
+
     }
 
     .mainSectionBtnWrap button:nth-child(1){

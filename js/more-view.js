@@ -1,8 +1,10 @@
 // more view Button
 document.getElementById('moreViewBtn').addEventListener('click', function() {
-    const imgWrap = document.querySelector('.mainIndexRight_imgWrap');
+    console.log("클릭")
+    const imgWrap = document.querySelector('.mainIndexRight_imgWrapper');
     const newImgWrap = document.querySelector('.mainIndexRight_imgWrap');
-    newImg.src = './asset/MainIndex/stickySection/sticky_group.png';
-    imgWrap.appendChild(newImgWrap);
+
+    const clonedImgWrap = newImgWrap.cloneNode(true);
+    imgWrap.appendChild(clonedImgWrap);
 
 });

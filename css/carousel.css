@@ -53,6 +53,12 @@
     flex: 1;
     gap: 2.08vw;
 }
+.carouselTop_img_Wrap{
+    width: 19vw;
+    height: 19vw;
+    overflow: hidden;
+    border-radius: 50%;;
+}
 .carouselTop_img{
     object-fit: contain;
     width: 19vw;
@@ -130,6 +136,12 @@
     flex-direction: row;
     flex: 1;
     gap: 4.16vw;
+}
+.carouselBottom_img_wrap{
+    width: 29.68vw;
+    height: 29.68vw;
+    border-radius: 50%;
+    overflow: hidden;
 }
 .carouselBottom_img{
     object-fit: contain;

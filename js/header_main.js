@@ -1,7 +1,7 @@
 // 스크롤 시 header fade-in
 $(document).on('scroll', function(){
     if($(window).width() >768){
-        if($(window).scrollTop() >= 1838){
+        if($(window).scrollTop() >= 1738){
             $("#header").removeClass("deactive");
             $("#header").addClass("active");
 
