@@ -166,8 +166,7 @@ main{
 
 /* 대학의 미래를 열다 */
 .hallym{
-    transform: translateX(0);
-    transform: translateY(0);
+    transform: translate(0, 0)
 }
 .hallym:nth-child(1){
     transition: 1.3s ease-in-out;
@@ -207,7 +206,7 @@ main{
     justify-content: center;
     align-items: center;
     gap: 2.08vw;
-    padding: 15.6vw 19vw 0 19vw;
+    padding: 12.6vw 19vw 0 19vw;
 }
 
 .vertical-section h1{

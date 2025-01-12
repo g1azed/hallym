@@ -18,9 +18,7 @@ $(document).ready(function () {
     $(window).on('scroll', function () {
         // 스크롤 위치 가져오기
         const scrollTop = $(this).scrollTop();
-    
 
-        
         if (scrollTop < 800 && scrollTop >= 0) {
             $Text_allnew.css('transform', 'translateX(0)');
             $Text_allnew.css('clip-path', '  inset(-100% 0% -100% 0%)');
@@ -29,37 +27,36 @@ $(document).ready(function () {
             $Text_allnew.css('clip-path', ' inset(-100% 0% -100% 100%)');
         }
 
-
-        
-
-
         if (scrollTop > 833) {
             $Text_hallym.css('transform', 'translateX(0)');
-            $Text_hallym.css('clip-path', '  inset(-100% 0% -100% 0%)');
-        } else if(scrollTop <= 833 && scrollTop == 0){
-            $Text_hallym.css('transform', 'translateX(200px)');
-            $Text_hallym.css('clip-path', ' inset(-100% 100% -100% 0%)');
-        }else if(scrollTop >= 2930){
-            $Text_hallym.css('transform', 'translateY(200px)');
-            // $Text_hallym.css('clip-path', ' inset(0% 100% 0% 0%)');
+            $Text_hallym.css('clip-path', 'inset(-100% 0% -100% 0%)');
+        } else if (scrollTop <= 833 && scrollTop == 0) {
+            $Text_hallym[0].offsetHeight; // 강제 리렌더링
+            $Text_hallym.css('transform', 'translateX(200px) translateY(0px)');
+            $Text_hallym.css('clip-path', 'inset(-100% 100% -100% 0%)');
+        } else if (scrollTop >= 3480) {
+            $Text_hallym.css('transform', 'translateY(-200px)'); // Y축만 설정
         }
 
+        // 인디케이터
         if(scrollTop >= 2930){
             $Indicator.css("visibility", 'hidden')
         }else{
             $Indicator.css("visibility", 'visible')
         }
 
-
-        3780
-        if(scrollTop > 5271){
-            $(".bg_video").empty()
-        }else{
-            $(".bg_video").append(` <video autoplay loop muted>
-                    <source src="./asset/main_video.mp4" /> 
-                </video>`)
+        if (scrollTop > 5271) {
+            $(".bg_video").empty(); // 비디오 제거
+        } else if (scrollTop <= 5271 && scrollTop > 0) {
+            // 비디오가 없는 경우에만 추가
+            if ($(".bg_video video").length == 0) {
+                $(".bg_video").append(`
+                    <video autoplay loop muted>
+                        <source src="./asset/main_video.mp4" type="video/mp4" />
+                    </video>
+                `);
+            }
         }
-
 
     });
 });
