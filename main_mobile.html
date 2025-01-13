@@ -9,19 +9,33 @@
     <style>
         body{
             background-color: #eee;
+
+        }
+        div{
+            width: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
         }
+        img{
+            max-width: 750px;
+            width: 100%;
+        }
 
         @media (max-width: 375px){
             img{
-                max-width: 375px;
+                max-width: 100vw;
+                object-fit: contain;
             }
         }
     </style>
 </head>
 <body>
-    <img src="./asset/MO_01_Main_B.png" />
+    <div>
+        <a href="./main.html" target='_blank' >
+            <img src="./asset/MO_01_Main_B.png" />
+        </a>
+    </div>
+
 </body>
 </html>
