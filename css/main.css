@@ -159,8 +159,8 @@ main{
     animation : allnewText 1.3s 1 2.4s forwards;
 }
 .allnew:nth-child(14){
-    transition: all 2.1s ease-in-out;
-    transform: translateX(0);
+    transition: all 2.1s ease-in-out; 
+	transform: translateX(0);
     animation : allnewText 1.3s 1 2.45s forwards;
 }
 
@@ -179,13 +179,13 @@ main{
     transition: all 1.7s ease-in-out;
 }
 .hallym:nth-child(4){
-    transition: all 2s 1 0.3s ease-in-out;
+    transition: all 2s ease-in-out;
 }
 .hallym:nth-child(5){
-    transition: all 2.1s 1 0.3s ease-in-out;
+    transition: all 2.1s ease-in-out;
 }
 .hallym:nth-child(6){
-    transition: all 2.3s 1 0.3s ease-in-out;
+    transition: all 2.3s ease-in-out;
 }
 .hallym:nth-child(7){
     transition: all 2.3s ease-in-out;
