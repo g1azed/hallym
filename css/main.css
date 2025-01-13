@@ -299,10 +299,10 @@ main {
     transition: width 0.1s ease;
 }
 .indicator_text_wrap{
-    width: 191%;
+    width: 183%;
     padding-left: 1.04vw;
     position: absolute;
-    bottom: 4vw;
+    bottom: 3vw;
     left: 9.25vw;
 
     font-family: IBM Plex Sans KR;
@@ -330,7 +330,7 @@ main {
     width: 30%;
     height: 1px;
     background-color: #6e6e6e;
-    transform: rotate(90deg) translate(-1.04vw, 2.64vw);
+    transform: rotate(90deg) translate(-2.1vw, -5.3vw);
 }
 
 
