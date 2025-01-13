@@ -178,15 +178,15 @@ main{
 .hallym:nth-child(3){
     transition: all 1.7s ease-in-out;
 }
-.hallym:nth-child(4){
-    transition: all 1.9s ease-in-out;
+/* .hallym:nth-child(4){
+    transition: all 2s 1 0.3s ease-in-out;
 }
 .hallym:nth-child(5){
-    transition: all 2.1s ease-in-out;
+    transition: all 2.1s 1 0.3s ease-in-out;
 }
 .hallym:nth-child(6){
-    transition: all 2.3s ease-in-out;
-}
+    transition: all 2.3s 1 0.3s ease-in-out;
+} */
 .hallym:nth-child(7){
     transition: all 2.3s ease-in-out;
 }
