@@ -42,7 +42,7 @@ $(document).ready(function () {
             $Indicator.css("visibility", 'visible')
         }
 
-        if (scrollTop > 5271) {
+        if (scrollTop >= 4441) {
             $(".bg_video").empty(); // 비디오 제거
         } else if (scrollTop <= 5271 && scrollTop > 0) {
             // 비디오가 없는 경우에만 추가
