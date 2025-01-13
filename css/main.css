@@ -370,8 +370,12 @@ main {
     flex-shrink: 1;
     gap: 2.08vw;
 }
+.mainIndexLeft{
+    height: 130vw
+}
 .mainIndex-2 .mainIndexLeft img {
     width: 50vw;
+
     position: sticky;
     top: 0;
     padding-bottom: 13vw;
