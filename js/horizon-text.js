@@ -3,7 +3,7 @@ $(document).ready(function () {
 
     const $Text_allnew = $(".allnew");
     const $Text_hallym = $(".hallym");
-    const $Indicator = $(".indicator_bar_wrap");
+    const $Indicator = $(".indicator-bar");
 
     // 애니메이션 끝난 후 이벤트
     //333 
@@ -36,13 +36,13 @@ $(document).ready(function () {
         }
 
         // 인디케이터
-        if(scrollTop >= 3466){
+        if(scrollTop >= 4133){
             $Indicator.css("visibility", 'hidden')
         }else{
             $Indicator.css("visibility", 'visible')
         }
 
-        if (scrollTop >= 5777) {
+        if (scrollTop > 5271) {
             $(".bg_video").empty(); // 비디오 제거
         } else if (scrollTop <= 5271 && scrollTop > 0) {
             // 비디오가 없는 경우에만 추가
