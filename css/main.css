@@ -178,7 +178,7 @@ main{
 .hallym:nth-child(3){
     transition: all 1.7s ease-in-out;
 }
-/* .hallym:nth-child(4){
+.hallym:nth-child(4){
     transition: all 2s 1 0.3s ease-in-out;
 }
 .hallym:nth-child(5){
@@ -186,7 +186,7 @@ main{
 }
 .hallym:nth-child(6){
     transition: all 2.3s 1 0.3s ease-in-out;
-} */
+}
 .hallym:nth-child(7){
     transition: all 2.3s ease-in-out;
 }
