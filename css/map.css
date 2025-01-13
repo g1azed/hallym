@@ -54,7 +54,7 @@ section.map_Wrapper{
     padding: 1.25vw 1.04vw;
 }
 .map_search_wrap img{
-    width: 16.1vw;
+    width: 100%;
 } 
 .aside_btn_wrap{
     /* max-height: 85.59vh; */
