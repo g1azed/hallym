@@ -1,6 +1,14 @@
 const selectIcon = document.querySelector(".map_select");
 const hoverImg = document.querySelector(".map_hover_img");
 
+// popup active
+const asideBtn = document.getElementsByClassName("aside_btn");
+const iconClick = document.querySelector(".map_hover_wrap");
+
+const popupBox = document.querySelector(".popup_wrap");
+
+const asideBtnLength = asideBtn.length;
+
 selectIcon.addEventListener("mouseover", () => {
     // console.log("오버ㅏ")
     if(hoverImg.classList.contains('hide')){
@@ -12,7 +20,7 @@ selectIcon.addEventListener("mouseover", () => {
     }
 })
 selectIcon.addEventListener("mouseleave", () => {
-    // console.log("오버ㅏ")
+    // console.log("오버")
     if(hoverImg.classList.contains('hide')){
         hoverImg.classList.remove('hide')
         // console.log("생겻당")
@@ -22,15 +30,14 @@ selectIcon.addEventListener("mouseleave", () => {
     }
 })
 
+iconClick.addEventListener("click", () => {
+    popupBox.classList.toggle('none');
+})
 
+popupBox.addEventListener("click", () => {
+    popupBox.classList.toggle('none');
+})
 
-// popup active
-const asideBtn = document.getElementsByClassName("aside_btn");
-const iconClick = document.querySelector(".map_hover_wrap");
-
-const popupBox = document.querySelector(".popup_wrap");
-
-const asideBtnLength = asideBtn.length;
 
 // 로딩 시 초기화 (기본 스타일 설정)
 window.onload = function () {
@@ -39,12 +46,6 @@ window.onload = function () {
         asideBtn[i].style.color = "#121212";           // 기본 텍스트 색
     }
 };
-
-iconClick.addEventListener("click", () => {
-    popupBox.classList.toggle('none');
-})
-
-
 
 for (let i = 0; i < asideBtnLength; i++) {
     asideBtn[i].addEventListener("click", function () {
