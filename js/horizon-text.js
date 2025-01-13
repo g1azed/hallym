@@ -36,7 +36,7 @@ $(document).ready(function () {
         }
 
         // 인디케이터
-        if(scrollTop >= 2930){
+        if(scrollTop >= 3466){
             $Indicator.css("visibility", 'hidden')
         }else{
             $Indicator.css("visibility", 'visible')
