@@ -3,7 +3,7 @@ $(document).ready(function () {
 
     const $Text_allnew = $(".allnew");
     const $Text_hallym = $(".hallym");
-    const $Indicator = $(".indicator-bar");
+    const $Indicator = $(".indicator_bar_wrap");
 
     // 애니메이션 끝난 후 이벤트
     //333 
