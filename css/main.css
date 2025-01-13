@@ -300,9 +300,10 @@ main {
 }
 .indicator_text_wrap{
     width: 191%;
+    padding-left: 1.04vw;
     position: absolute;
     bottom: 4vw;
-    left: 8.25vw;
+    left: 9.25vw;
 
     font-family: IBM Plex Sans KR;
     font-size: 0.93vw;
@@ -314,19 +315,22 @@ main {
     justify-content: space-between;
     align-items: center;
 }
-.indicator_text_wrap p:nth-child(1){
+/* .indicator_text_wrap p:nth-child(1){
     padding-left: 1.04vw;
-}
+} */
 .indicator_text_wrap p:nth-child(2){
     padding-right: 20vw;
 }
+/* .indicator_text_wrap p:nth-child(3){
+    padding-left: 1.04vw;
+} */
 .indicator_text_wrap p:nth-child(3):after{
     content: "";
     display: block;
     width: 30%;
     height: 1px;
     background-color: #6e6e6e;
-    transform: rotate(90deg) translate(-1.04vw, 1.64vw);
+    transform: rotate(90deg) translate(-1.04vw, 2.64vw);
 }
 
 
@@ -424,8 +428,8 @@ main {
 
 .mainIndex-2 .mainIndexRight_btnWrap button {
     font-family: "Pretendard Variable";
-    font-weight: 500;
-    font-size: 1.25vw;
+    font-weight: 400;
+    font-size: 0.83vw;
     line-height: 1.6vw;
     border: 1px solid #121212;
     padding: 0.41vw 1.04vw;
