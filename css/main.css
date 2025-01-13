@@ -166,7 +166,8 @@ main{
 
 /* 대학의 미래를 열다 */
 .hallym{
-    transform: translate(0, 0)
+    transform: translate(200px, 0);
+    clip-path: inset(-100% 0% -100% 100%);
 }
 .hallym:nth-child(1){
     transition: 1.3s ease-in-out;
